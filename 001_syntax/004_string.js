@@ -4,7 +4,6 @@
  */
 
 function length(str) {
-  return str.length;
 }
 
 /**
@@ -13,7 +12,6 @@ function length(str) {
  */
 
 function lengthIsEven(str) {
-  return str.length % 2 === 0;
 }
 
 /**
@@ -22,7 +20,6 @@ function lengthIsEven(str) {
  */
 
 function firstChar(str) {
-  return str.slice(0, 1);
 }
 
 /**
@@ -32,7 +29,6 @@ function firstChar(str) {
  */
 
 function substring(str, a, b) {
-  return str.slice(a - 1, b);
 }
 
 /**
@@ -48,7 +44,6 @@ function substring(str, a, b) {
  */
 
 function isInclude(a, b) {
-  return a.includes(b);
 }
 
 /**
@@ -64,10 +59,4 @@ function isInclude(a, b) {
  */
 
 function isPalindrome(str) {
-  for (let i = 0; i < str.length / 2; i++) {
-    if (str[i] != str[str.length - 1 - i]) {
-      return false;
-    }
-  }
-  return true;
 }

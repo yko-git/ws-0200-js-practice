@@ -4,9 +4,6 @@
  */
 
 function printArray(array) {
-  for (let i = 0; i < array.length; i++) {
-    console.log(array[i]);
-  }
 }
 
 /**
@@ -25,15 +22,6 @@ function printArray(array) {
  *
  */
 function getDays() {
-  return [
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-    'Saturday',
-    'Sunday',
-  ];
 }
 
 /**
@@ -47,12 +35,6 @@ function getDays() {
  */
 
 function findNum(array, num) {
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === num) {
-      return true;
-    }
-  }
-  return false;
 }
 
 /**
@@ -66,12 +48,4 @@ function findNum(array, num) {
  */
 
 function isDuplicate(array) {
-  for (let i = 0; i < array.length; i++) {
-    for (let j = 0; j < array.length; j++) {
-      if (i !== j && array[i] === array[j]) {
-        return true;
-      }
-    }
-  }
-  return false;
 }
