@@ -21,7 +21,7 @@ function printOneToTenDesc() {
 }
 
 /**
- *  3.2 while文を使って0~10までの数字を小さい順番に表示するメソッドを実装してください
+ *  3.3 while文を使って0~10までの数字を小さい順番に表示するメソッドを実装してください
  *
  */
 
@@ -32,4 +32,3 @@ function printOneToTenWhile() {
     i++;
   }
 }
-

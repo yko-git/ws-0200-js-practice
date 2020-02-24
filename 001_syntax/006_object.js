@@ -78,12 +78,12 @@ function assignNumber(persons) {
  */
 
 function isDuplicate(array) {
-  numMap = {}
+  numMap = {};
   for (let i = 0; i < array.length; i++) {
     if (numMap[array[i]]) {
-       return true
+      return true;
     }
-    numMap[array[i]] = true
+    numMap[array[i]] = true;
   }
   return false;
 }
