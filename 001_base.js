@@ -83,3 +83,10 @@ function isEven(a) {
   return a % 2 === 0
 }
 
+/**
+ *  1.10 渡された二つの文字列を連結するメソッドを実装してください
+ *
+ */
+function concatString(a, b) {
+  return a + b
+}
