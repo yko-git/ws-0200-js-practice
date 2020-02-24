@@ -36,7 +36,23 @@ function substring(str, a, b) {
 }
 
 /**
- *  4.5 引数に与えられたアルファベットの文字列が回文であること
+ *  4.5 引数に与えられた二つの引数のうち、一つ目の引数の文字列に二つ目の引数の文字列が
+ *  含まれることを確認するメソッドを実装してください
+ *
+ *  example:
+ *      "workplace", "work" => true
+ *      "work", "workplace" => false
+ *      "hogehoge", "" => true
+ *      "hogegeho", "fugafuga" => false
+ *
+ */
+
+function isInclude(a, b) {
+  return a.includes(b);
+}
+
+/**
+ *  4.6 引数に与えられたアルファベットの文字列が回文であること
  *  を確認するメソッドを実装してください
  *
  *  example:
