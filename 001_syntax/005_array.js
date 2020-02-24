@@ -35,3 +35,43 @@ function getDays() {
     'Sunday',
   ];
 }
+
+/**
+ *  5.3 配列に特定の数があった場合にtrue、そうでない場合にfalseを返す関数を実装してください
+ *
+ *  example:
+ *    [1, 2, 3], 1 => true
+ *    [1, 2, 3], 5 => false
+ *    [], 5 => false
+ *
+ */
+
+function findNum(array, num) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === num) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/**
+ *  5.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください
+ *
+ *  example:
+ *    [1, 2, 3], 1 => false
+ *    [1, 2, 2, 3], 5 => true
+ *    [] => false
+ *
+ */
+
+function isDuplicate(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      if (i !== j && array[i] === array[j]) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
