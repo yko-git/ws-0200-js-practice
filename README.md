@@ -20,8 +20,8 @@ JavaScript練習用のリポジトリ です。
 
 #### 参考資料
 
-[JavaScript ドキュメント] (https://developer.mozilla.org/ja/docs/Web/JavaScript)
-[プログラムの計算量を求める方法](https://qiita.com/cotrpepe/items/1f4c38cc9d3e3a5f5e9c#%E8%A3%9C%E8%B6%B3%E6%99%82%E9%96%93%E8%A8%88%E7%AE%97%E9%87%8F%E3%81%A8%E7%A9%BA%E9%96%93%E8%A8%88%E7%AE%97%E9%87%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
+- [JavaScript ドキュメント] (https://developer.mozilla.org/ja/docs/Web/JavaScript)
+- [プログラムの計算量を求める方法](https://qiita.com/cotrpepe/items/1f4c38cc9d3e3a5f5e9c#%E8%A3%9C%E8%B6%B3%E6%99%82%E9%96%93%E8%A8%88%E7%AE%97%E9%87%8F%E3%81%A8%E7%A9%BA%E9%96%93%E8%A8%88%E7%AE%97%E9%87%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
 
 
 ## 課題で身に着けること
