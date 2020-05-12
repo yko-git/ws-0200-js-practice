@@ -38,15 +38,15 @@ function fibonacci (num, index = 0, array = []) {
  *  example:
  *    {
  *      type: 'folder',
- *      size: 0
+ *      size: 0,
  *      children: [
  *        {
  *          type: 'folder',
- *          size: 0
+ *          size: 0,
  *          children: [
  *            {
- *              type: 'folder'
- *              size: 0
+ *              type: 'folder',
+ *              size: 0,
  *              children: [
  *                {
  *                  type: 'file',
