@@ -56,8 +56,8 @@ function assignNumber(persons) {
  *      但し、オブジェクトを使って実装すること
  *
  *  example:
- *    [1, 2, 3], 1 => false
- *    [1, 2, 2, 3], 5 => true
+ *    [1, 2, 3] => false
+ *    [1, 2, 2, 3] => true
  *    [] => false
  *
  */
