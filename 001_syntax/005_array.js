@@ -41,11 +41,11 @@ function findNum(array, num) {
  *  5.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください
  *
  *  example:
- *    [1, 2, 3], 1 => false
- *    [1, 2, 2, 3], 5 => true
+ *    [1, 2, 3] => false
+ *    [1, 2, 2, 3] => true
  *    [] => false
  *
  */
 
-function isDuplicate(array, num) {
+function isDuplicate(array) {
 }
