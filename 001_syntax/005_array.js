@@ -47,5 +47,5 @@ function findNum(array, num) {
  *
  */
 
-function isDuplicate(array) {
+function isDuplicate(array, num) {
 }
