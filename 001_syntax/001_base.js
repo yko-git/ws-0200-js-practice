@@ -90,3 +90,17 @@ function isEven(a) {
 function concatString(a, b) {
   return a + b;
 }
+
+module.exports = {
+  helloWorld,
+  displayConst,
+  displayLet,
+  displayArgument,
+  sumTwoArgs,
+  subtractTwoArgs,
+  quotientTwoArgs,
+  productTwoArgs,
+  remainderTwoArgs,
+  isEven,
+  concatString
+}
