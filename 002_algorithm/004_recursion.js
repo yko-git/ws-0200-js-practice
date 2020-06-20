@@ -7,7 +7,7 @@
  *  example:
  *    3 => 6
  *    10 => 55
- *    30 => 55
+ *    30 => 465
  */
 
 function sumSequence (n, sum = 0) {
