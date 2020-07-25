@@ -68,3 +68,9 @@ function getDay(day) {
       console.log('Saturday');
   }
 }
+
+module.exports = {
+  printMessageByAge,
+  greeding,
+  getDay
+}
