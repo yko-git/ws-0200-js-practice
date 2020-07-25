@@ -49,6 +49,15 @@ function mutateObject(person) {
  */
 
 function assignNumber(persons) {
+<<<<<<< HEAD
+=======
+  let obj = {};
+  for (let i = 0; i < persons.length; i++) {
+    const rand = Math.floor((Math.random() * 10) + 1);
+    obj[persons[i]] = rand;
+  }
+  return obj;
+>>>>>>> develop
 }
 
 /**
@@ -63,4 +72,22 @@ function assignNumber(persons) {
  */
 
 function isDuplicate(array) {
+<<<<<<< HEAD
+=======
+  numMap = {};
+  for (let i = 0; i < array.length; i++) {
+    if (numMap[array[i]]) {
+      return true;
+    }
+    numMap[array[i]] = true;
+  }
+  return false;
+>>>>>>> develop
+}
+
+module.exports = {
+  getPersonObject,
+  mutateObject,
+  assignNumber,
+  isDuplicate
 }

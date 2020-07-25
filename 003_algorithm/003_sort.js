@@ -9,7 +9,6 @@
  */
 
 function bubbleSort (array) {
-  return array
 }
 
 /**
@@ -23,7 +22,6 @@ function bubbleSort (array) {
  */
 
 function insertSort (array) {
-  return array
 }
 
 /**
@@ -36,10 +34,11 @@ function insertSort (array) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function mergeSort (array) {
-  return array
+function mergeSort (arr) {
 }
 
+function merge(left, right) {
+}
 
 /**
  *  2.2.4 クイックソート
@@ -51,7 +50,12 @@ function mergeSort (array) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function quickSort (array, start = 0, end = (array.length -1)) {
-  return array
+function quickSort (a, start = 0, end = (a.length -1)) {
 };
 
+module.exports = {
+  bubbleSort,
+  insertSort,
+  mergeSort,
+  quickSort
+}

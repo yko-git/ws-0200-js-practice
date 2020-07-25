@@ -1,4 +1,3 @@
-
 /**
  *  1.1 Hello Worldという文字を出力するメソッドを定義してください
  *
@@ -7,14 +6,14 @@ function helloWorld() {
 }
 
 /**
- *  1.2 const を使って定義した変数を出力するdisplayConstメソッドを実装してください
+ *  1.2 const を使って"hoge"という文字列を定義した変数を定義し、それを出力する関数を定義してください
  *
  */
 function displayConst() {
 }
 
 /**
- *  1.3 let を使って定義した変数を出力するdisplayLetメソッドを実装してください
+ *  1.3 let を使って"hoge"という文字列を定義した変数を定義し、それを出力する関数を定義してください
  *
  */
 function displayLet() {
@@ -42,7 +41,7 @@ function subtractTwoArgs(a, b) {
 }
 
 /**
- *  1.7 渡された二つの引数の商を返却するメソッドを実装してください
+ *  1.7 渡された二つの引数の商を返却するメソッドを実装してください。0での割り算はnullを返却してください。
  *
  */
 function quotientTwoArgs(a, b) {
@@ -74,4 +73,18 @@ function isEven(a) {
  *
  */
 function concatString(a, b) {
+}
+
+module.exports = {
+  helloWorld,
+  displayConst,
+  displayLet,
+  displayArgument,
+  sumTwoArgs,
+  subtractTwoArgs,
+  quotientTwoArgs,
+  productTwoArgs,
+  remainderTwoArgs,
+  isEven,
+  concatString
 }

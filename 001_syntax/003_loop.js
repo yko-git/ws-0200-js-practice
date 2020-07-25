@@ -8,8 +8,7 @@ function printOneToTen() {
 
 /**
  *  3.2 0~10までの数字を数字の大きい順に表示するメソッドを実装してください
- *
- */
+ * */
 
 function printOneToTenDesc() {
 }
@@ -22,3 +21,17 @@ function printOneToTenDesc() {
 function printOneToTenWhile() {
 }
 
+/**
+ *  3.4 while文を使って0~10までの数字を大きい順番に表示するメソッドを実装してください
+ *
+ */
+
+function printOneToTenWhileDesc() {
+}
+
+module.exports = {
+  printOneToTen,
+  printOneToTenDesc,
+  printOneToTenWhile,
+  printOneToTenWhileDesc
+}

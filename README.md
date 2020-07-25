@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> develop
 ## js-practice
 
 JavaScript練習用のリポジトリ です。
@@ -50,6 +53,7 @@ JavaScript練習用のリポジトリ です。
      - [Arrayリファレンス](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)
    - 006_object.js
      - [JavaScript オブジェクトの基本](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics)
+<<<<<<< HEAD
 
 - 0002_algorithm アルゴリズム問題をjsを使ってとく問題
    - 001_easy.js
@@ -63,6 +67,22 @@ JavaScript練習用のリポジトリ です。
    - 005_stackQueue.js スタック・キューのアルゴリズム問題（作成中）
      - [スタックとキューを極める！ 〜 考え方と使い所を特集 〜 - Qiita](https://qiita.com/drken/items/6a95b57d2e374a3d3292)
    - 006_linkedList.js 単一方向リストのアルゴリズム問題（作成中）
+=======
+- 0002_practice js練習問題
+   - 001_easy.js
+   - 002_medium.js
+- 0003_algorithm アルゴリズム問題をjsを使ってとく問題
+   - 001_recursion.js 再帰アルゴリズムの実装
+     - [再帰関数を学ぶと、どんな世界が広がるか - Qiita](https://qiita.com/drken/items/23a4f604fa3f505dd5ad)
+   - 002_search.js 検索アルゴリズムの実装
+     - [リニアサーチ（線形探索法） ~『楽しく学ぶ　アルゴリズムとプログラミングの図鑑』より](https://book.mynavi.jp/manatee/detail/id=64253)
+     - [アルゴリズムを勉強するなら二分探索から始めよう！ 『なっとく！アルゴリズム』より](https://codezine.jp/article/detail/9900?p=2)
+   - 003_sort.js ソートアルゴリズムの実装
+   　- [ソートを極める！ 〜 なぜソートを学ぶのか 〜](https://qiita.com/drken/items/44c60118ab3703f7727f#10-7-%E3%83%9C%E3%82%B4%E3%82%BD%E3%83%BC%E3%83%88)
+   - 004_stackQueue.js スタック・キューのアルゴリズム問題（作成中）
+     - [スタックとキューを極める！ 〜 考え方と使い所を特集 〜 - Qiita](https://qiita.com/drken/items/6a95b57d2e374a3d3292)
+   - 005_linkedList.js 単一方向リストのアルゴリズム問題（作成中）
+>>>>>>> develop
      - [プログラマならみんな知ってるよね!データ構造と計算量について](https://lab.sonicmoov.com/development/programming/data-structure/)
 
 - [JavaScript ドキュメント](https://developer.mozilla.org/ja/docs/Web/JavaScript)
@@ -72,7 +92,29 @@ JavaScript練習用のリポジトリ です。
 出力する・表示するといったものはconsole.logを使ってコンソールに結果を出力するようにしてください。
 また、返却する・返すといった指定のあるものはreturnで値を返すようお願いします。
 
+<<<<<<< HEAD
 ※ 余裕のある方はJavaScriptの組み込みのAPIを使わずに実装してみましょう
+=======
+※ JavaScriptの組み込みのAPIを使わずに実装してみましょう
+
+#### 4. テストコードを実行
+
+各問題にはテストコードが用意されています。(testディレクトリ配下) 各問題を解いたらテストコードを実行して期待の挙動になていることを確認しましょう。
+
+```bash
+$ npm run test # テストを実行
+```
+![テスト実行-全て](./assets/run-test-all.png)
+
+全てのテストを実行すると時間がかかるので下記のようにテストファイルを指定して実行することもできます。
+
+```bash
+$ npm run test [テストファイルへのパス] # テストを実行
+```
+
+![テスト実行-ファイル](./assets/run-test-file.png)
+
+>>>>>>> develop
 
 ## 目次
 
@@ -82,6 +124,7 @@ JavaScript練習用のリポジトリ です。
    - 003_loop.js
    - 004_string.js
    - 005_object.js
+<<<<<<< HEAD
 - 0002_algorithm アルゴリズム問題をjsを使ってとく問題
    - 001_easy.js
    - 002_sort.js ソートアルゴリズムの実装
@@ -89,4 +132,15 @@ JavaScript練習用のリポジトリ です。
    - 004_recursive.js 再帰アルゴリズムの実装
    - 005_stackQueue.js スタック・キューのアルゴリズム問題（作成中）
    - 006_linkedList.js 単一方向リストのアルゴリズム問題（作成中）
+=======
+- 0002_practice js練習問題
+   - 001_easy.js
+- 0003_algorithm アルゴリズム問題をjsを使ってとく問題
+   - 001_recursion.js 再帰アルゴリズムの実装
+   - 002_search.js 検索アルゴリズムの実装
+   - 003_sort.js ソートアルゴリズムの実装
+   - 004_stackQueue.js スタック・キューのアルゴリズム問題（作成中）
+   - 005_linkedList.js 単一方向リストのアルゴリズム問題（作成中）
+
+>>>>>>> develop
 

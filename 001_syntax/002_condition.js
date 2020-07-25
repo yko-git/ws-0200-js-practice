@@ -34,3 +34,9 @@ function greeding(hour) {
 
 function getDay(day) {
 }
+
+module.exports = {
+  printMessageByAge,
+  greeding,
+  getDay
+}

@@ -1,23 +1,22 @@
 
 /**
- *  2.4.1 数列の和
+ *  数列の和
  *
  *  再帰処理を用いて、0からnまでの数列の和を返す関数を実装してください
  *
  *  example:
  *    3 => 6
  *    10 => 55
- *    30 => 465
+ *    30 => 55
  */
 
 function sumSequence (n, sum = 0) {
-  return n
 }
 
 /**
- *  2.4.2 フィボナッチ数
+ *  フィボナッチ数
  *
- *  再帰処理を用いて,指定された数のフィボナッチ数を返却する関数を実装してください。
+ *  指定された数のフィボナッチ数を返却する関数を実装してください。
  *  https://www.studyplus.jp/445
  *
  *  example:
@@ -25,7 +24,6 @@ function sumSequence (n, sum = 0) {
  */
 
 function fibonacci (num, index = 0, array = []) {
-  return num
 }
 
 
@@ -82,7 +80,11 @@ function fibonacci (num, index = 0, array = []) {
  */
 
 function fileSize (node, sum = 0) {
-  return sum
 }
 
 
+module.exports = {
+  sumSequence,
+  fibonacci,
+  fileSize
+}

@@ -7,7 +7,7 @@ function printArray(array) {
 }
 
 /**
- *  5.2 全ての曜日を配列として返却するメソッドを実装してください
+ *  5.2 関数内で全ての曜日を配列として宣言して返却するメソッドを実装してください
  *
  *  example:
  *     [
@@ -48,4 +48,11 @@ function findNum(array, num) {
  */
 
 function isDuplicate(array) {
+}
+
+module.exports = {
+  printArray,
+  getDays,
+  findNum,
+  isDuplicate
 }
