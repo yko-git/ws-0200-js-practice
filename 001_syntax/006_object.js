@@ -60,10 +60,10 @@ function mutateObject(person) {
 function assignNumber(persons) {
   let obj = {};
   for (let i = 0; i < persons.length; i++) {
-    const rand = Math.floor(Math.random() * 11);
+    const rand = Math.floor((Math.random() * 10) + 1);
     obj[persons[i]] = rand;
   }
-  return obje;
+  return obj;
 }
 
 /**

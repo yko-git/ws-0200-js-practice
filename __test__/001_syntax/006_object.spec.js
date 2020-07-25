@@ -1,102 +1,57 @@
 const { logMock } = require('../index');
 const {
-  printOneToTen,
-  printOneToTenDesc,
-  printOneToTenWhile,
-  printOneToTenWhileDesc,
-} = require('../../001_syntax/003_loop');
+  getPersonObject,
+  mutateObject,
+  assignNumber,
+  isDuplicate,
+} = require('../../001_syntax/006_object');
 
 const origin = console.log;
 afterEach(() => (console.log = origin));
 
-describe('printOneToTen', () => {
-  let outputs = [];
-  beforeEach(() => {
-    outputs = []
-    console.log = logMock(outputs)
-  });
+describe('getPersonObject', () => {
   test('正常系', () => {
-    printOneToTen();
-
-    expect(outputs[0]).toEqual(0);
-    expect(outputs[1]).toEqual(1);
-    expect(outputs[2]).toEqual(2);
-    expect(outputs[3]).toEqual(3);
-    expect(outputs[4]).toEqual(4);
-    expect(outputs[5]).toEqual(5);
-    expect(outputs[6]).toEqual(6);
-    expect(outputs[7]).toEqual(7);
-    expect(outputs[8]).toEqual(8);
-    expect(outputs[9]).toEqual(9);
-    expect(outputs[10]).toEqual(10);
+    const res = getPersonObject()
+    expect(res.name).toEqual("Bob");
+    expect(res.age).toEqual(32);
+    expect(res.gender).toEqual("male");
   });
 });
 
-describe('printOneToTenDesc', () => {
-  let outputs = [];
-  beforeEach(() => {
-    outputs = []
-    console.log = logMock(outputs)
-  });
+describe('mutateObject', () => {
   test('正常系', () => {
-    printOneToTenDesc();
-
-    expect(outputs[0]).toEqual(10);
-    expect(outputs[1]).toEqual(9);
-    expect(outputs[2]).toEqual(8);
-    expect(outputs[3]).toEqual(7);
-    expect(outputs[4]).toEqual(6);
-    expect(outputs[5]).toEqual(5);
-    expect(outputs[6]).toEqual(4);
-    expect(outputs[7]).toEqual(3);
-    expect(outputs[8]).toEqual(2);
-    expect(outputs[9]).toEqual(1);
-    expect(outputs[10]).toEqual(0);
+    const res = mutateObject({ name: 'Bob', age: 32, gender: 'male' })
+    expect(res.name).toEqual("Mary");
+    expect(res.age).toEqual(37);
+    expect(res.gender).toEqual("female");
+    expect(Object.keys(res).length).toEqual(3);
   });
 });
 
-describe('printOneToTenWhile', () => {
-  let outputs = [];
-  beforeEach(() => {
-    outputs = []
-    console.log = logMock(outputs)
-  });
+describe('assignNumber', () => {
   test('正常系', () => {
-    printOneToTenWhile();
+    let res = assignNumber(['Bob', 'Mary', 'Ann', 'Mike'])
 
-    expect(outputs[0]).toEqual(0);
-    expect(outputs[1]).toEqual(1);
-    expect(outputs[2]).toEqual(2);
-    expect(outputs[3]).toEqual(3);
-    expect(outputs[4]).toEqual(4);
-    expect(outputs[5]).toEqual(5);
-    expect(outputs[6]).toEqual(6);
-    expect(outputs[7]).toEqual(7);
-    expect(outputs[8]).toEqual(8);
-    expect(outputs[9]).toEqual(9);
-    expect(outputs[10]).toEqual(10);
+    expect(res.Bob).toBeGreaterThan(0);
+    expect(res.Mary).toBeGreaterThan(0);
+    expect(res.Ann).toBeGreaterThan(0);
+    expect(res.Mike).toBeGreaterThan(0);
+
+    res = assignNumber(['paris', 'tokyo', 'newyork', 'london'])
+
+    expect(res.paris).toBeGreaterThan(0);
+    expect(res.tokyo).toBeGreaterThan(0);
+    expect(res.newyork).toBeGreaterThan(0);
+    expect(res.london).toBeGreaterThan(0);
   });
 });
 
-describe('printOneToTenWhileDesc', () => {
-  let outputs = [];
-  beforeEach(() => {
-    outputs = []
-    console.log = logMock(outputs)
-  });
+describe('isDuplicate', () => {
   test('正常系', () => {
-    printOneToTenWhileDesc();
-
-    expect(outputs[0]).toEqual(10);
-    expect(outputs[1]).toEqual(9);
-    expect(outputs[2]).toEqual(8);
-    expect(outputs[3]).toEqual(7);
-    expect(outputs[4]).toEqual(6);
-    expect(outputs[5]).toEqual(5);
-    expect(outputs[6]).toEqual(4);
-    expect(outputs[7]).toEqual(3);
-    expect(outputs[8]).toEqual(2);
-    expect(outputs[9]).toEqual(1);
-    expect(outputs[10]).toEqual(0);
+    expect(isDuplicate([1, 2, 3, 2])).toEqual(true);
+    expect(isDuplicate([2, 2, 2, 2])).toEqual(true);
+    expect(isDuplicate([1, 2, 2, 3])).toEqual(true);
+    expect(isDuplicate([1, 2, 3])).toEqual(false);
+    expect(isDuplicate([])).toEqual(false);
   });
 });
