@@ -258,8 +258,7 @@ function filter(array, num) {
   const res = []
   for (let i = 0; i < array.length; i++) {
     if (array[i] <= num) {
-      res.push(array[i])
-    }
+      res.push(array[i]) }
   }
   return res
 }
