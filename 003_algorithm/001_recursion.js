@@ -1,6 +1,6 @@
 
 /**
- *  2.4.1 数列の和
+ *  数列の和
  *
  *  再帰処理を用いて、0からnまでの数列の和を返す関数を実装してください
  *
@@ -19,7 +19,7 @@ function sumSequence (n, sum = 0) {
 }
 
 /**
- *  2.4.2 フィボナッチ数
+ *  フィボナッチ数
  *
  *  指定された数のフィボナッチ数を返却する関数を実装してください。
  *  https://www.studyplus.jp/445
@@ -52,15 +52,15 @@ function fibonacci (num, index = 0, array = []) {
  *  example:
  *    {
  *      type: 'folder',
- *      size: 0
+ *      size: 0,
  *      children: [
  *        {
  *          type: 'folder',
- *          size: 0
+ *          size: 0,
  *          children: [
  *            {
- *              type: 'folder'
- *              size: 0
+ *              type: 'folder',
+ *              size: 0,
  *              children: [
  *                {
  *                  type: 'file',
@@ -109,3 +109,8 @@ function fileSize (node, sum = 0) {
 }
 
 
+module.exports = {
+  sumSequence,
+  fibonacci,
+  fileSize
+}
