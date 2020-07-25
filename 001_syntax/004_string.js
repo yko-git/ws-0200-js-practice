@@ -31,7 +31,7 @@ function firstChar(str) {
  */
 
 function lastChar(str) {
-  return str.slice(0, 1);
+  return str.slice(-1);
 }
 
 /**
@@ -81,6 +81,7 @@ module.exports = {
   length,
   lengthIsEven,
   firstChar,
+  lastChar,
   substring,
   isInclude,
   printByChar
