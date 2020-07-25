@@ -233,6 +233,29 @@ function evenSeq(num) {
   return res
 }
 
+/**
+ *  指定された数値以下の配列
+ *
+ *  指定された数字以下を抜き出した配列を返す関数を定義してください
+ *
+ *  example:
+ *    [1, 7, 5, 4], 3 => [1]
+ *    [1, 7, 5, 4], 7 => [1, 7, 5, 4]
+ *    [], 7 => []
+ *
+ */
+
+function filter(array, num) {
+  const res = []
+  for (let i = 1; i < num; i = i + 2) {
+    if (array[i] < num) {
+      res.push(i)
+    }
+  }
+  return res
+}
+
+
 
 /**
  *  Fizz Buzz
