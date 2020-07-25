@@ -1,6 +1,7 @@
 const {logMock} = require('../index');
 const {
   bubbleSort,
+  insertSort,
   mergeSort,
   quickSort,
 } = require('../../003_algorithm/003_sort');
@@ -14,6 +15,12 @@ const ans = [1, 5, 6, 12, 31, 32, 33, 34, 42, 43, 53, 54, 63, 67, 88]
 describe('bubbleSort', () => {
   test('normal', () => {
     expect(bubbleSort(list)).toEqual(ans);
+  });
+});
+
+describe('insertSort', () => {
+  test('normal', () => {
+    expect(insertSort(list)).toEqual(ans);
   });
 });
 

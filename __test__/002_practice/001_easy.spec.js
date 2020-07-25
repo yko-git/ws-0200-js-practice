@@ -6,6 +6,7 @@ const {
   split,
   sum,
   average,
+  size,
   minMax,
   concat,
   seq,
@@ -61,6 +62,13 @@ describe('average', () => {
     expect(average([1, 2, 3])).toEqual(2);
     expect(average([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).toEqual(5);
     expect(average([])).toEqual(0);
+  });
+});
+
+describe('size', () => {
+  test('normal', () => {
+    expect(size([1, 2, 3])).toEqual(3);
+    expect(size([])).toEqual(0);
   });
 });
 

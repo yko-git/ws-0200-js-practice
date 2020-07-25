@@ -314,6 +314,7 @@ module.exports = {
   split,
   sum,
   average,
+  size,
   minMax,
   concat,
   seq,

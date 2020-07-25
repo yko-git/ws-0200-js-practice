@@ -139,6 +139,7 @@ function quickSort (a, start = 0, end = (a.length -1)) {
 
 module.exports = {
   bubbleSort,
+  insertSort,
   mergeSort,
   quickSort
 }
