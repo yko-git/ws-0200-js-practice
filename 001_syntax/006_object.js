@@ -87,3 +87,10 @@ function isDuplicate(array) {
   }
   return false;
 }
+
+module.exports = {
+  getPersonObject,
+  mutateObject,
+  assignNumber,
+  isDuplicate
+}
