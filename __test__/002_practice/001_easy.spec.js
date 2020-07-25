@@ -1,128 +1,134 @@
 const { logMock } = require('../index');
 const {
-  helloWorld,
-  displayLet,
-  displayConst,
-  displayArgument,
-  sumTwoArgs,
-  subtractTwoArgs,
-  quotientTwoArgs,
-  productTwoArgs,
-  remainderTwoArgs,
-  isEven,
-  concatString
-} = require('../../001_syntax/001_base');
+  length,
+  reverse,
+  findIndex,
+  split,
+  sum,
+  average,
+  minMax,
+  concat,
+  seq,
+  omitSeq,
+  filter,
+  fizzBuzz
+} = require('../../002_practice/001_easy');
 
 const origin = console.log;
 afterEach(() => (console.log = origin));
 
-describe('helloWorld', () => {
-  let outputs = [];
-  beforeEach(() => (console.log = logMock(outputs)));
-  test('call console.log', () => {
-    helloWorld();
-
-    expect(outputs[0]).toEqual('Hello World');
-  });
-});
-
-describe('displayConst', () => {
-  let outputs = [];
-  beforeEach(() => (console.log = logMock(outputs)));
-  test('display output', () => {
-    displayConst();
-    expect(outputs[0]).toEqual('hoge');
-  });
-});
-
-describe('displayLet', () => {
-  let outputs = [];
-  beforeEach(() => (console.log = logMock(outputs)));
-  test('display output', () => {
-    displayLet();
-    expect(outputs[0]).toEqual('hoge');
-  });
-});
-
-describe('displayArgument', () => {
-  let outputs = [];
-  beforeEach(() => (console.log = logMock(outputs)));
-  test('display output', () => {
-    displayArgument('hoge');
-    expect(outputs[0]).toEqual('hoge');
-  });
-});
-
-describe('sumTwoArgs', () => {
-  test('addition postive', () => {
-    expect(sumTwoArgs(1, 2)).toEqual(3)
-  });
-  test('addition zero', () => {
-    expect(sumTwoArgs(0, 0)).toEqual(0)
-  });
-  test('addition negative', () => {
-    expect(sumTwoArgs(-1, -2)).toEqual(-3)
-  });
-});
-
-describe('subtractTwoArgs', () => {
-  test('subtraction postive', () => {
-    expect(subtractTwoArgs(3, 2)).toEqual(1)
-  });
-  test('subtraction zero', () => {
-    expect(subtractTwoArgs(3, 0)).toEqual(3)
-  });
-  test('subtraction negative', () => {
-    expect(subtractTwoArgs(-3, -5)).toEqual(2)
-  });
-});
-
-describe('quotientTwoArgs', () => {
-  test('normal divide', () => {
-    expect(quotientTwoArgs(3, 2)).toEqual(1)
-  });
-  test('zero divide', () => {
-    expect(quotientTwoArgs(3, 0)).toEqual(null)
-  });
-});
-
-describe('productTwoArgs', () => {
-  test('normal multiple', () => {
-    expect(productTwoArgs(3, 2)).toEqual(6)
-  });
-  test('negative multiple', () => {
-    expect(productTwoArgs(-3, 2)).toEqual(-6)
-  });
-});
-
-describe('remainderTwoArgs', () => {
+describe('length', () => {
   test('normal', () => {
-    expect(remainderTwoArgs(3, 2)).toEqual(1)
-    expect(remainderTwoArgs(4, 2)).toEqual(0)
-    expect(remainderTwoArgs(-2, 2)).toEqual(-0)
-    expect(remainderTwoArgs(-1, 2)).toEqual(-1)
-    expect(remainderTwoArgs(12345, 2)).toEqual(1)
+    expect(length('hello')).toEqual(5);
+    expect(length('bar')).toEqual(3);
+    expect(length('')).toEqual(0);
   });
 });
 
-describe('isEven', () => {
-  test('is even', () => {
-    expect(isEven(0)).toEqual(true)
-    expect(isEven(2)).toEqual(true)
-    expect(isEven(-4)).toEqual(true)
-    expect(isEven(2842)).toEqual(true)
-  });
-  test('is odd', () => {
-    expect(isEven(1)).toEqual(false)
-    expect(isEven(-1)).toEqual(false)
-    expect(isEven(3)).toEqual(false)
-    expect(isEven(127)).toEqual(false)
+describe('reverse', () => {
+  test('normal', () => {
+    expect(reverse('library')).toEqual('yrarbil');
+    expect(reverse('work')).toEqual('krow');
+    expect(reverse('')).toEqual('');
   });
 });
 
-describe('concatString', () => {
-  test('concat', () => {
-    expect(concatString("abc", "def")).toEqual("abcdef")
-    expect(concatString("abc", "")).toEqual("abc")
+describe('findIndex', () => {
+  test('normal', () => {
+    expect(findIndex('library', 'l')).toEqual(0);
+    expect(findIndex('library', 'r')).toEqual(3);
+    expect(findIndex('library', 'z')).toEqual(-1);
   });
 });
+
+describe('split', () => {
+  test('normal', () => {
+    expect(split('library', 'a')).toEqual(['libr', 'ry']);
+    expect(split('banana,apple,pineapple', ',')).toEqual(['banana', 'apple', 'pineapple']);
+  });
+});
+
+describe('sum', () => {
+  test('normal', () => {
+    expect(sum([1, 2, 3, 7])).toEqual(13);
+    expect(sum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).toEqual(55);
+    expect(sum([])).toEqual(0);
+  });
+});
+
+describe('average', () => {
+  test('normal', () => {
+    expect(average([1, 2, 3])).toEqual(2);
+    expect(average([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])).toEqual(5);
+    expect(average([])).toEqual(0);
+  });
+});
+
+describe('minMax', () => {
+  let outputs = []
+  beforeEach(() => {
+    outputs = []
+    console.log = logMock(outputs)
+  });
+  test('normal', () => {
+    minMax([1, 9])
+    minMax([-1, 1, 5, 7, 9])
+    minMax([2, 2, 2, 2])
+    minMax([])
+    expect(outputs[0]).toEqual("max: 9, min: 1");
+    expect(outputs[1]).toEqual("max: 9, min: -1");
+    expect(outputs[2]).toEqual("max: 2, min: 2");
+    expect(outputs.length).toEqual(3);
+  });
+});
+
+describe('seq', () => {
+  test('normal', () => {
+    expect(seq(5)).toEqual([0, 1, 2, 3, 4]);
+    expect(seq(0)).toEqual([]);
+  });
+});
+
+describe('omitSeq', () => {
+  test('normal', () => {
+    expect(omitSeq(5)).toEqual([1, 3, 5]);
+    expect(omitSeq(4)).toEqual([1, 3]);
+    expect(omitSeq(0)).toEqual([]);
+  });
+});
+
+describe('filter', () => {
+  test('normal', () => {
+    expect(filter([1, 5, 7], 5)).toEqual([1, 5]);
+    expect(filter([1, 5, 7], 7)).toEqual([1, 5, 7]);
+    expect(filter([], 3)).toEqual([]);
+  });
+});
+
+describe('fizzBuzz', () => {
+  let outputs = []
+  beforeEach(() => {
+    outputs = []
+    console.log = logMock(outputs)
+  });
+  test('normal', () => {
+    fizzBuzz()
+    for (let i = 1; i < 100; i++) {
+      if ((i % 5 === 0) && (i % 3 === 0)) {
+        expect(outputs[i-1]).toEqual(`${i} FizzBuzz`);
+        continue
+      }
+
+      if (i % 3 === 0) {
+        expect(outputs[i-1]).toEqual(`${i} Fizz`);
+        continue
+      }
+
+      if (i % 5 === 0) {
+        expect(outputs[i-1]).toEqual(`${i} Buzz`);
+        continue
+      }
+    }
+  });
+});
+

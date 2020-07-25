@@ -78,9 +78,11 @@ function split(a, b) {
   for(let i = 0; i < str.length; i++) {
     if (str[i] === b) {
       res.push(str.slice(0, i))
-      str = str(i, str.length)
+      str = str.slice(i+1, str.length)
+      i = 0
     }
   }
+  res.push(str)
   return res
 }
 
@@ -120,10 +122,13 @@ function sum(array) {
 
 function average(array) {
   let sum = 0;
+  if (array.length === 0) {
+    return 0
+  }
   for(let i = 0; i < array.length; i++) {
     sum = sum + array[i]
   }
-  return Math.ceil(sum/array.length)
+  return Math.floor(sum/array.length)
 }
 
 /**
@@ -174,12 +179,16 @@ function size(array) {
  *    [1, 3, 7, 9] => max: 20, min: 1
  *    [2, 5, 3, 6, 10, -1] => max: 10, min: -1
  *    [1] => max: 1, min: 1
+ *    [] => 表示しない
  *
  */
 
 function minMax(array) {
   let min = null
   let max = null
+  if (array.length === 0) {
+    return
+  }
   for (let i = 0; i < array.length; i++) {
     const current = array[i]
     if(min == null || current < min) {
@@ -219,15 +228,15 @@ function seq(num) {
  *  指定された数字までの奇数の連番の配列を生成する関数を定義してください
  *
  *  example:
- *    5 => [1, 3]
+ *    5 => [1, 3, 5]
  *    10 => [1, 3, 5, 7, 9]
  *    0 => []
  *
  */
 
-function evenSeq(num) {
+function omitSeq(num) {
   const res = []
-  for (let i = 1; i < num; i = i + 2) {
+  for (let i = 1; i <= num; i = i + 2) {
     res.push(i)
   }
   return res
@@ -247,9 +256,9 @@ function evenSeq(num) {
 
 function filter(array, num) {
   const res = []
-  for (let i = 1; i < num; i = i + 2) {
-    if (array[i] < num) {
-      res.push(i)
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] <= num) {
+      res.push(array[i])
     }
   }
   return res
@@ -297,4 +306,19 @@ function fizzBuzz () {
 
     console.log(i + ' ' + str)
   }
+}
+
+module.exports = {
+  length,
+  reverse,
+  findIndex,
+  split,
+  sum,
+  average,
+  minMax,
+  concat,
+  seq,
+  filter,
+  omitSeq,
+  fizzBuzz
 }
