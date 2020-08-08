@@ -5,9 +5,9 @@
  *  lengthをも使わずに引数で渡された文字列の長さを求める関数を定義してください
  *
  *  example:
- *    [1, 3, 7, 9] => output: 20
- *    [2, 5, 3] => output: 10
- *    [1] => output: 1
+ *    'banana' => output: 5
+ *    'cucumber' => output: 8
+ *    '' => output: 0
  *
  */
 
