@@ -29,7 +29,7 @@ JavaScript練習用のリポジトリ です。
 
 JavaScriptが初めての方は下記ドキュメントに目を通して頂けると良いかと思います。
 
-- [JSPrimer](https://jsprimer.net/basic) (一部だけで大丈夫です）
+- [JSPrimer](https://jsprimer.net/basic) (第一部: 基本文法 だけで大丈夫です）
 
 一度に全部読む必要はないので、問題を解きながら適宜参照してください。
 
