@@ -23,7 +23,13 @@ JavaScript練習用のリポジトリ です。
 
 #### 0. 課題を始める前にリポジトリ をフォーク
 
+- [GitHubフォークのやり方](https://version-1workspace.gitbook.io/github/how-to-fork)
+
 #### 1. フォークしてリポジトリ をクローンして課題をスタート
+
+Gitが初めての方は下記を参照ください。
+
+- [プログラミングを学ぶ前に始めるGit入門](https://version-1workspace.gitbook.io/git/)
 
 #### 2. 課題に必要な概念を学ぶ
 
