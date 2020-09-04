@@ -66,6 +66,7 @@ JavaScript練習用のリポジトリ です。
      - [プログラマならみんな知ってるよね!データ構造と計算量について](https://lab.sonicmoov.com/development/programming/data-structure/)
 
 - [JavaScript ドキュメント](https://developer.mozilla.org/ja/docs/Web/JavaScript)
+- [JSPrimer](https://jsprimer.net/basic)
 
 #### 3. 各設問のコメントにしたがって、回答
 
