@@ -36,6 +36,7 @@ JavaScript練習用のリポジトリ です。
    - 001_base.js
      - [式と演算子](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators)
      - [JavaScriptでの基本演算 — 数値と演算子](https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/Math)
+     - [JavaScriptで書く「var,let,const」の違いと使い分け方法](https://techacademy.jp/magazine/14872)
    - 002_condition.js
      - [制御フローとエラー処理](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
    - 003_loop.js
