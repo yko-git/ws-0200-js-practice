@@ -27,6 +27,10 @@ JavaScript練習用のリポジトリ です。
 
 #### 2. 課題に必要な概念を学ぶ
 
+JavaScriptが初めての方は下記ドキュメントに目を通して頂けると良いかと思います。
+
+- [JSPrimer](https://jsprimer.net/basic) (一部だけで大丈夫です）
+
 一度に全部読む必要はないので、問題を解きながら適宜参照してください。
 
 - [プログラムの計算量を求める方法](https://qiita.com/cotrpepe/items/1f4c38cc9d3e3a5f5e9c#%E8%A3%9C%E8%B6%B3%E6%99%82%E9%96%93%E8%A8%88%E7%AE%97%E9%87%8F%E3%81%A8%E7%A9%BA%E9%96%93%E8%A8%88%E7%AE%97%E9%87%8F%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6)
@@ -64,9 +68,6 @@ JavaScript練習用のリポジトリ です。
      - [スタックとキューを極める！ 〜 考え方と使い所を特集 〜 - Qiita](https://qiita.com/drken/items/6a95b57d2e374a3d3292)
    - 005_linkedList.js 単一方向リストのアルゴリズム問題（作成中）
      - [プログラマならみんな知ってるよね!データ構造と計算量について](https://lab.sonicmoov.com/development/programming/data-structure/)
-
-- [JavaScript ドキュメント](https://developer.mozilla.org/ja/docs/Web/JavaScript)
-- [JSPrimer](https://jsprimer.net/basic)
 
 #### 3. 各設問のコメントにしたがって、回答
 
