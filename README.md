@@ -52,12 +52,15 @@ JavaScriptが初めての方は下記ドキュメントに目を通して頂け�
    - 003_loop.js
       - [ループとイテレータ](https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Loops_and_iteration)
    - 004_string.js
+     - [文字列 | JavaScriptPrimer ](https://jsprimer.net/basic/string/)
      - [テキストを扱う — JavaScript での文字列](https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/Strings)
      - [Stringリファレンス](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/String)
    - 005_array.js
+     - [配列 | JSPrimer ](https://jsprimer.net/basic/array/)
      - [配列](https://developer.mozilla.org/ja/docs/Learn/JavaScript/First_steps/Arrays)
      - [Arrayリファレンス](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)
    - 006_object.js
+     - [オブジェクト | JSPrimer ](https://jsprimer.net/basic/object/)
      - [JavaScript オブジェクトの基本](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics)
 - 0002_practice js練習問題
    - 001_easy.js
