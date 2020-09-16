@@ -56,11 +56,15 @@ function isInclude(a, b) {
 /**
  *  4.7 引数で渡された文字列を一文字ずつ表示するメソッドを実装してください
  *
- *  example:
- *      work => false
- *      anna => true
- *      madam => true
- *      level => true
+ * example:
+ *   'library'
+ *    出力 => 'l'
+ *           'i'
+ *           'b'
+ *           'r'
+ *           'a'
+ *           'r'
+ *           'y'
  *
  */
 
