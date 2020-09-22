@@ -5,7 +5,7 @@
  *  lengthをも使わずに引数で渡された文字列の長さを求める関数を定義してください
  *
  *  example:
- *    'banana' => output: 5
+ *    'banana' => output: 6
  *    'cucumber' => output: 8
  *    '' => output: 0
  *
@@ -83,7 +83,7 @@ function sum(array) {
  *    [2, 5, 3] => output: 3
  *    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] => output: 5
  *    [1] => output: 1
- *    [] => output: 1
+ *    [] => output: 0
  *
  */
 
