@@ -9,6 +9,7 @@
  */
 
 function bubbleSort (array) {
+  return array
 }
 
 /**
@@ -22,6 +23,7 @@ function bubbleSort (array) {
  */
 
 function insertSort (array) {
+  return array
 }
 
 /**
@@ -35,6 +37,7 @@ function insertSort (array) {
  */
 
 function mergeSort (arr) {
+  return arr
 }
 
 function merge(left, right) {
@@ -51,6 +54,7 @@ function merge(left, right) {
  */
 
 function quickSort (a, start = 0, end = (a.length -1)) {
+  return a
 };
 
 module.exports = {
