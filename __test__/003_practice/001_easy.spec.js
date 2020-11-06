@@ -13,7 +13,7 @@ const {
   omitSeq,
   filter,
   fizzBuzz
-} = require('../../002_practice/001_easy');
+} = require('../../003_practice/001_easy');
 
 const origin = console.log;
 afterEach(() => (console.log = origin));

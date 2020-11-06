@@ -6,7 +6,7 @@ const {
   isPalindrome,
   isPrime,
   sumWithout4andNext
-} = require('../../002_practice/002_medium');
+} = require('../../003_practice/002_medium');
 
 const origin = console.log;
 afterEach(() => (console.log = origin));

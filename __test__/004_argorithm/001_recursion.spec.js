@@ -3,7 +3,7 @@ const {
   sumSequence,
   fibonacci,
   fileSize,
-} = require('../../003_algorithm/001_recursion');
+} = require('../../004_algorithm/001_recursion');
 
 const origin = console.log;
 afterEach(() => (console.log = origin));
