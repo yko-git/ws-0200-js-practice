@@ -7,10 +7,11 @@
  *  2. Personクラスにクラスメソッドdescribe()を実装してください
  *     describeメソッドでは、This is a Person class という文字列を表示するように実装してください
  *  3. Personクラスにname, age, bioフィールドを追加してください
+ *     デフォルト値はname => '', age => 0, bio => ''
  *  4. Personクラスにコンストラクタを宣言して、name, age, bioフィールドを初期化できるようにしてください
  *  5. PersonクラスにisUnderageのゲッターを宣言してくだい。メソッドでは、ageが20歳未満であればtrue,
  *     そうでなければfalseを返すように実装してください
- *  6. 下記のtest関数が動くように、それぞれ実装をしてください。
+ *  6. 下記のmain関数が動くように、それぞれ実装をしてください。
  *  　　1 ~ 5 が完了していれば、toStringのメソッドを実装するだけで大丈夫です。
  *      toStringは下記の内容が標準出力されることが期待値です。(先頭、末尾の空白は不要）
  *
@@ -27,7 +28,7 @@ class Person {
   age = 0
   bio = ''
 
-  constructor(name, age, bio) {
+  constructor(name = '', age = 0, bio = '') {
     this.name = name
     this.age = age
     this.bio = bio
@@ -46,10 +47,10 @@ class Person {
   }
 }
 
-function test () {
+function main () {
   const person = new Person('ichiro', 54, 'I like to play baseball')
   person.sayHi()
-  person.describe()
+  Person.describe()
   person.isUnderage
 
   person.bio = 'I like to play basketball'
@@ -58,5 +59,5 @@ function test () {
 
 module.exports = {
   Person,
-  test
+  main
 }
