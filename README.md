@@ -67,6 +67,7 @@ JavaScriptが初めての方は下記ドキュメントに目を通して頂け�
    - 006_object.js
      - [オブジェクト | JSPrimer ](https://jsprimer.net/basic/object/)
      - [JavaScript オブジェクトの基本](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics)
+     - [オブジェクト リファレンス](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object)
 - 0002_practice js練習問題
    - 001_easy.js
    - 002_medium.js
