@@ -3,6 +3,7 @@
  *  継承
  *
  *  Animalクラスを継承するDog, Pig, Chikenクラスを実装してください
+ *  main関数は編集不要です。
  *
  *  Dogクラス
  *    typeフィールド: dog
@@ -10,8 +11,8 @@
  *  Duckクラス
  *    typeフィールド: duck
  *    barkメソッド: quack, quack! を標準出力
- *  Chikenクラス
- *    typeフィールド: chiken
+ *  Chickenクラス
+ *    typeフィールド: chicken
  *    barkメソッド: cock-a-doodle-do! を標準出力
  *
  */
@@ -41,15 +42,15 @@ class Dog extends Animal {
 }
 
 class Duck extends Animal {
-  type = 'dog'
+  type = 'duck'
 
   bark() {
-    console.log('wang, wang!')
+    console.log('quack, quack!')
   }
 }
 
-class Chiken extends Animal {
-  type = 'chiken'
+class Chicken extends Animal {
+  type = 'chicken'
 
   bark() {
     console.log('cock-a-doodle-do!')
@@ -57,23 +58,23 @@ class Chiken extends Animal {
 }
 
 
-function test () {
+function main () {
   const dog = new Dog()
-  const pig = new Pig()
-  const chiken = new Dog()
+  const duck = new Duck()
+  const chicken = new Chicken()
 
   dog.who()
-  pig.who()
-  chiken.who()
+  duck.who()
+  chicken.who()
 
   dog.bark()
-  pig.bark()
-  chiken.bark()
+  duck.bark()
+  chicken.bark()
 }
 
 module.exports = {
-  test,
-  Chiken,
+  main,
+  Chicken,
   Dog,
   Duck
 }
