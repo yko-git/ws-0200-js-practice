@@ -167,6 +167,18 @@ describe('Stack', () => {
     expect(stack.pop()).toEqual(undefined)
     expect(stack.size).toEqual(0)
   })
+
+  test('#peek', () => {
+    let stack = new Stack()
+
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
+    expect(stack.peek()).toEqual(3)
+    expect(stack.size).toEqual(3)
+    expect(stack.peek()).toEqual(3)
+    expect(stack.size).toEqual(3)
+  })
 })
 
 describe('Queue', () => {
@@ -179,28 +191,38 @@ describe('Queue', () => {
     expect(queue.size).toEqual(3)
   })
 
-  test('#push', () => {
+  test('#enqueue', () => {
     let queue = new Queue()
 
-    queue.push(1)
-    queue.push(2)
-    queue.push(3)
+    queue.enque(1)
+    queue.enque(2)
+    queue.enque(3)
     expect(queue.size).toEqual(3)
   })
 
-  test('#pop', () => {
-    let stack = new Queue()
+  test('#dequeue', () => {
+    let queue = new Queue()
 
-    stack.push(1)
-    stack.push(2)
-    stack.push(3)
-    expect(stack.pull()).toEqual(1)
+    queue.enqueue(1)
+    queue.enqueue(2)
+    queue.enqueue(3)
+    expect(stack.dequeue()).toEqual(1)
     expect(stack.size).toEqual(2)
-    expect(stack.pull()).toEqual(2)
+    expect(stack.dequeue()).toEqual(2)
     expect(stack.size).toEqual(1)
-    expect(stack.pull()).toEqual(3)
+    expect(stack.dequeue()).toEqual(3)
     expect(stack.size).toEqual(0)
-    expect(stack.pull()).toEqual(undefined)
+    expect(stack.dequeue()).toEqual(undefined)
     expect(stack.size).toEqual(0)
+  })
+
+  test('#peek', () => {
+    let queue = new Queue()
+
+    queue.enqueue(1)
+    queue.enqueue(2)
+    queue.enqueue(3)
+    expect(queue.peek()).toEqual(1)
+    expect(stack.size).toEqual(1)
   })
 })

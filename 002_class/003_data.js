@@ -183,7 +183,7 @@ class Queue {
    * @param {Number} item
    * @return {Number}
    */
-  push(item) {
+  enqueue(item) {
     // TODO:
   }
 
@@ -191,7 +191,7 @@ class Queue {
    *
    * @return {Number}
    */
-  pull() {
+  dequeue() {
     // TODO:
   }
 
