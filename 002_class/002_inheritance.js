@@ -2,7 +2,7 @@
 /**
  *  継承
  *
- *  Animalクラスを継承するDog, Pig, Chikenクラスを実装してください
+ *  Animalクラスを継承するDog, Duck, Chikenクラスを実装してください
  *  main関数は編集不要です。
  *
  *  Dogクラス
