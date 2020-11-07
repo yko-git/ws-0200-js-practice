@@ -16,8 +16,8 @@ describe('linearSearch', () => {
 
 describe('binarySearch', () => {
   test('normal', () => {
-    expect(linearSearch([1, 10, 20, 30, 40, 50, 90, 100], 40)).toEqual(4);
-    expect(linearSearch([1, 10, 20, 30, 40, 50, 90, 100], 110)).toEqual(-1);
+    expect(binarySearch([1, 10, 20, 30, 40, 50, 90, 100], 40)).toEqual(4);
+    expect(binarySearch([1, 10, 20, 30, 40, 50, 90, 100], 110)).toEqual(-1);
   });
 });
 

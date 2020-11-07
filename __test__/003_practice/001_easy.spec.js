@@ -5,7 +5,6 @@ const {
   findIndex,
   split,
   sum,
-  size,
   average,
   size,
   minMax,
