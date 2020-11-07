@@ -68,10 +68,19 @@ JavaScriptが初めての方は下記ドキュメントに目を通して頂け�
      - [オブジェクト | JSPrimer ](https://jsprimer.net/basic/object/)
      - [JavaScript オブジェクトの基本](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Basics)
      - [オブジェクト リファレンス](https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object)
-- 0002_practice js練習問題
+- 0002_class クラス
+   - 001_class.js
+     - [クラス | JSPrimer ](https://jsprimer.net/basic/class/)
+     - [JavaScriptとオブジェクト指向プログラミング](https://postd.cc/javascript-and-object-oriented-programming/)
+   - 002_inheritance.js
+     - [JavaScript での継承](https://developer.mozilla.org/ja/docs/Learn/JavaScript/Objects/Inheritance)
+         ※ クラス構文における継承の項参照
+   - 003_data.js
+     - [スタックとキューを極める！ 〜 考え方と使い所を特集 〜 - Qiita](https://qiita.com/drken/items/6a95b57d2e374a3d3292)
+- 0003_practice js練習問題
    - 001_easy.js
    - 002_medium.js
-- 0003_algorithm アルゴリズム問題をjsを使ってとく問題
+- 0004_algorithm アルゴリズム問題をjsを使ってとく問題
    - 001_recursion.js 再帰アルゴリズムの実装
      - [再帰関数を学ぶと、どんな世界が広がるか - Qiita](https://qiita.com/drken/items/23a4f604fa3f505dd5ad)
    - 002_search.js 検索アルゴリズムの実装
@@ -117,10 +126,14 @@ $ npm run test [テストファイルへのパス] # テストを実行
    - 003_loop.js
    - 004_string.js
    - 005_object.js
-- 0002_practice js練習問題
+- 0002_class クラスとオブジェクト指向に関する問題
+   - 001_class.js
+   - 002_inheritance.js
+   - 003_data.js
+- 0003_practice js練習問題
    - 001_easy.js
    - 002_medium.js
-- 0003_algorithm アルゴリズム問題をjsを使ってとく問題
+- 0004_algorithm アルゴリズム問題をjsを使ってとく問題
    - 001_recursion.js 再帰アルゴリズムの実装
    - 002_search.js 検索アルゴリズムの実装
    - 003_sort.js ソートアルゴリズムの実装
