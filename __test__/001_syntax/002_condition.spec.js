@@ -3,7 +3,7 @@ const {
   printMessageByAge,
   greeding,
   getDay
-} = require("../../001_syntax/002_condition");
+} = require('../../001_syntax/002_condition');
 
 const origin = console.log;
 afterEach(() => (console.log = origin));
@@ -47,7 +47,11 @@ describe("greeding", () => {
     expect(outputs[1]).toEqual("Hello");
   });
 
+<<<<<<< HEAD
   test("夜の場合", () => {
+=======
+  test('夜の場合', () => {
+>>>>>>> feature/add-oop-part
     greeding(17);
     greeding(3);
     expect(outputs[0]).toEqual("Good Night");
@@ -55,6 +59,7 @@ describe("greeding", () => {
   });
 });
 
+<<<<<<< HEAD
 describe("getDay", () => {
   let outputs = [];
   beforeEach(() => {
@@ -75,6 +80,29 @@ describe("getDay", () => {
   });
   test("存在しない添字", () => {
     getDay(7);
+=======
+describe('getDay', () => {
+  let outputs = [];
+  beforeEach(() => {
+    outputs = []
+    console.log = logMock(outputs)
+  });
+  test('任意の曜日', () => {
+    for (let i = 0; i < 7; i++) {
+      getDay(i)
+    }
+    expect(outputs[0]).toEqual('Sunday');
+    expect(outputs[1]).toEqual('Monday');
+    expect(outputs[2]).toEqual('Tuesday');
+    expect(outputs[3]).toEqual('Wednesday');
+    expect(outputs[4]).toEqual('Thursday');
+    expect(outputs[5]).toEqual('Friday');
+    expect(outputs[6]).toEqual('Saturday');
+  });
+
+  test('存在しない添字', () => {
+    getDay(7)
+>>>>>>> feature/add-oop-part
     expect(outputs.length).toEqual(0);
   });
 });

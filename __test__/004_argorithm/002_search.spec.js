@@ -2,7 +2,7 @@ const {logMock} = require('../index');
 const {
   linearSearch,
   binarySearch
-} = require('../../003_algorithm/002_search');
+} = require('../../004_algorithm/002_search');
 
 const origin = console.log;
 afterEach(() => (console.log = origin));

@@ -4,7 +4,7 @@ const {
   insertSort,
   mergeSort,
   quickSort
-} = require("../../003_algorithm/003_sort");
+} = require("../../004_algorithm/003_sort");
 
 const origin = console.log;
 afterEach(() => (console.log = origin));

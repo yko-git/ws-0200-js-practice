@@ -216,6 +216,7 @@ module.exports = {
   sum,
   size,
   average,
+  size,
   minMax,
   concat,
   seq,
