@@ -33,30 +33,9 @@ class Animal {
   }
 }
 
-class Dog extends Animal {
-  type = 'dog'
+/* ↓ ↓ ↓ こちらに実装 */
 
-  bark() {
-    console.log('wang, wang!')
-  }
-}
-
-class Duck extends Animal {
-  type = 'duck'
-
-  bark() {
-    console.log('quack, quack!')
-  }
-}
-
-class Chicken extends Animal {
-  type = 'chicken'
-
-  bark() {
-    console.log('cock-a-doodle-do!')
-  }
-}
-
+/* ↑ ↑ ↑ こちらに実装 */
 
 function main () {
   const dog = new Dog()

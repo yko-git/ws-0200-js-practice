@@ -5,6 +5,8 @@
  *  データ構造をクラスで実装してみましょう。
  *  実際に使われるリストは要素の型の縛りはありませんが、今回のリストは要素を数値に限定します。
  *
+ *  TODO: のついているメソッドを実際に実装してください
+ *
  */
 
 class List {
@@ -24,16 +26,16 @@ class List {
    * @return {Number}
    */
   get size() {
-    return this.data.length;
+    // TODO:
   }
 
-  /** 引数で渡されたデータを取得する
+  /** 引数で渡された添字のデータを取得する
    *
    * @param {Number} index
    * @return {Number}
    */
   index(index) {
-    return this.data[index];
+    // TODO:
   }
 
   /** リストの 要素を追加する
@@ -42,7 +44,7 @@ class List {
    * @return {Number}
    */
   push(item) {
-    this.data.push(item);
+    // TODO:
   }
 
   /** 与えられた引数により、リストの 要素を削除する
@@ -51,9 +53,7 @@ class List {
    * @return {Number}
    */
   remove(targetIndex) {
-    const num = this.data[targetIndex]
-    this.data = this.data.filter((_, index) => index !== targetIndex);
-    return num
+    // TODO:
   }
 
   /** リストの 末尾の要素を取得する
@@ -62,7 +62,7 @@ class List {
    * @return {Number}
    */
   pop() {
-    return this.data.pop();
+    // TODO:
   }
 
   /** リストの 先頭の要素を取得する
@@ -70,7 +70,7 @@ class List {
    * @return {Number}
    */
   shift() {
-    return this.data.shift();
+    // TODO:
   }
 
   /** リストの の中から引数に合致する値を取得する
@@ -81,12 +81,7 @@ class List {
    * @return {Number | undefined}
    */
   find(target) {
-    for (let i = 0; i < this.data.length; i++) {
-      const item = this.data[i];
-      if (item === target) {
-        return item;
-      }
-    }
+    // TODO:
   }
 
   /** リストの の中から引数に合致する値のindexを取得する。見つからない場合は-1を返す
@@ -97,13 +92,7 @@ class List {
    * @return {Number}
    */
   findIndex(target) {
-    for (let i = 0; i < this.data.length; i++) {
-      const item = this.data[i];
-      if (item === target) {
-        return i;
-      }
-    }
-    return -1
+    // TODO:
   }
 
   /** リストの の中から要素に合致する数を取り除く
@@ -116,21 +105,17 @@ class List {
    * @return {Number[]}
    */
   filter(target) {
-    const list = new List([]);
-    for (let i = 0; i < this.data.length; i++) {
-      const item = this.data[i];
-      if (item !== target) {
-        list.push(item);
-      }
-    }
-    return list;
+    // TODO:
   }
 }
 
 /**
  *  スタックの実装
  *
+ *  スタックの実装を理解して、要素の追加、取り出しのメソッドをそれぞれ実装しましょう。
  *  https://qiita.com/drken/items/6a95b57d2e374a3d3292
+ *
+ *  TODO: のついているメソッドを実際に実装してください
  *
  */
 
@@ -148,10 +133,9 @@ class Stack {
   /** スタックに要素を追加する
    *
    * @param {Number} item
-   * @return {Number}
    */
   push(item) {
-    this.data.push(item);
+    // TODO:
   }
 
   /** スタックから要素を取得する
@@ -160,7 +144,7 @@ class Stack {
    * @return {Number}
    */
   pop() {
-    return this.data.pop();
+    // TODO:
   }
 
   /** スタックの末尾の要素を参照する
@@ -169,14 +153,17 @@ class Stack {
    * @return {Number}
    */
   peek() {
-    return this.data[this.length - 1];
+    // TODO:
   }
 }
 
 /**
  *  キューの実装
  *
+ *  キューの実装を理解して、要素の追加、取り出しのメソッドをそれぞれ実装しましょう。
  *  https://qiita.com/drken/items/6a95b57d2e374a3d3292
+ *
+ *  TODO: のついているメソッドを実際に実装してください
  *
  */
 
@@ -197,7 +184,7 @@ class Queue {
    * @return {Number}
    */
   push(item) {
-    this.data.push(item);
+    // TODO:
   }
 
   /** キューから要素を取得する
@@ -205,7 +192,7 @@ class Queue {
    * @return {Number}
    */
   pull() {
-    return this.data.shift();
+    // TODO:
   }
 
   /** キューの要素を参照する
@@ -213,7 +200,7 @@ class Queue {
    * @return {Number}
    */
   peek() {
-    return this.data[0];
+    // TODO:
   }
 }
 
