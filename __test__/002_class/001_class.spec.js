@@ -68,6 +68,6 @@ describe('main', () => {
     console.log = logMock(outputs)
   });
   test('main', () => {
-    expect(main()).toEqual(undefined);
+    expect(main()).toEqual('name: ichiro, age: 54, bio: I like to play basketball');
   })
 })
