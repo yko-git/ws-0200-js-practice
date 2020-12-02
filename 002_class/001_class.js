@@ -31,7 +31,7 @@ function main () {
   person.isUnderage
 
   person.bio = 'I like to play basketball'
-  person.toString()
+  return person.toString()
 }
 
 module.exports = {
