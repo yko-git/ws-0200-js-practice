@@ -37,7 +37,8 @@ Gitが初めての方は下記を参照ください。
 
 **※※※下記必ず確認してデバッガを使いこなせるようにお願いします。※※※**
 
-- [JavaScriptデバッグテクニック メソッド実行中の変数の中とか見たくない？ - Qiita](https://qiita.com/fruitriin/items/d0a1cd943233cd22ef30)
+- [JavaScriptでのデバッグ技術入門](https://version1-workspace.gitbook.io/javascript-5)
+
 
 JavaScriptが初めての方は下記ドキュメントに目を通して頂けると良いかと思います。
 
