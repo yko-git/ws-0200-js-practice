@@ -91,10 +91,6 @@ JavaScriptが初めての方は下記ドキュメントに目を通して頂け�
      - [アルゴリズムを勉強するなら二分探索から始めよう！ 『なっとく！アルゴリズム』より](https://codezine.jp/article/detail/9900?p=2)
    - 003_sort.js ソートアルゴリズムの実装
    　- [ソートを極める！ 〜 なぜソートを学ぶのか 〜](https://qiita.com/drken/items/44c60118ab3703f7727f#10-7-%E3%83%9C%E3%82%B4%E3%82%BD%E3%83%BC%E3%83%88)
-   - 004_stackQueue.js スタック・キューのアルゴリズム問題（作成中）
-     - [スタックとキューを極める！ 〜 考え方と使い所を特集 〜 - Qiita](https://qiita.com/drken/items/6a95b57d2e374a3d3292)
-   - 005_linkedList.js 単一方向リストのアルゴリズム問題（作成中）
-     - [プログラマならみんな知ってるよね!データ構造と計算量について](https://lab.sonicmoov.com/development/programming/data-structure/)
 
 #### 3. 各設問のコメントにしたがって、回答
 
@@ -140,6 +136,4 @@ $ npm run test [テストファイルへのパス] # テストを実行
    - 001_recursion.js 再帰アルゴリズムの実装
    - 002_search.js 検索アルゴリズムの実装
    - 003_sort.js ソートアルゴリズムの実装
-   - 004_stackQueue.js スタック・キューのアルゴリズム問題（作成中）
-   - 005_linkedList.js 単一方向リストのアルゴリズム問題（作成中）
 
