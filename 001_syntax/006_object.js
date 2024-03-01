@@ -75,9 +75,7 @@ function assignNumber(persons) {
  *
  */
 
-function isDuplicate(array) {
-  console.log(array);
-}
+function isDuplicate(array) {}
 
 module.exports = {
   getPersonObject,
