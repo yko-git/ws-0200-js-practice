@@ -8,6 +8,12 @@
  */
 
 function getPersonObject() {
+  const obj = {
+    name: "Bob",
+    age: 32,
+    gender: "male",
+  };
+  return obj;
 }
 
 /**
@@ -25,6 +31,9 @@ function getPersonObject() {
  */
 
 function mutateObject(person) {
+  person.name = "Mary";
+  person.age = 37;
+  person.gender = "female";
 }
 
 /**
@@ -49,6 +58,10 @@ function mutateObject(person) {
  */
 
 function assignNumber(persons) {
+  let obj = persons.reduce((pre, current) => {
+    return { ...pre, [current]: Math.random() * 10 };
+  }, {});
+  return obj;
 }
 
 /**
@@ -63,11 +76,12 @@ function assignNumber(persons) {
  */
 
 function isDuplicate(array) {
+  console.log(array);
 }
 
 module.exports = {
   getPersonObject,
   mutateObject,
   assignNumber,
-  isDuplicate
-}
+  isDuplicate,
+};
