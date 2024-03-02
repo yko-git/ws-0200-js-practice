@@ -48,7 +48,10 @@ function getDays() {
  */
 
 function findNum(array, num) {
-  return array.includes(num);
+  const isPassed = array.some((value) => {
+    return value === num;
+  });
+  return isPassed;
 }
 
 /**
