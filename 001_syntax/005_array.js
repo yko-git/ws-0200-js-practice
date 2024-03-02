@@ -48,10 +48,19 @@ function getDays() {
  */
 
 function findNum(array, num) {
-  const isPassed = array.some((value) => {
-    return value === num;
-  });
-  return isPassed;
+  // return array.some((value) => {
+  //   return value === num;
+  // });
+  for (let i = 0; i <= array.length; i++) {
+    if (!array[i] === num) {
+      if (array[array.length - 1] === num) {
+        return false;
+      }
+      findNum(array, num);
+    }
+
+    return true;
+  }
 }
 
 /**
