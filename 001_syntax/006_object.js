@@ -58,10 +58,9 @@ function mutateObject(person) {
  */
 
 function assignNumber(persons) {
-  let obj = persons.reduce((pre, current) => {
-    return { ...pre, [current]: Math.random() * 10 };
+  return persons.reduce((pre, current) => {
+    return { ...pre, [current]: Math.round(Math.random() * 10) };
   }, {});
-  return obj;
 }
 
 /**
