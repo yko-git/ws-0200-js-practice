@@ -13,11 +13,7 @@ function length(str) {
  */
 
 function lengthIsEven(str) {
-  if (str.length % 2 == 0) {
-    return true;
-  } else {
-    return false;
-  }
+  return str.length % 2 == 0;
 }
 
 /**
@@ -26,7 +22,12 @@ function lengthIsEven(str) {
  */
 
 function firstChar(str) {
-  return str.charAt();
+  // return str.charAt();
+  if (str) {
+    return str[0];
+  } else {
+    return "";
+  }
 }
 
 /**
@@ -45,7 +46,12 @@ function lastChar(str) {
  */
 
 function substring(str, a, b) {
-  return str.substring(a - 1, b);
+  // return str.substring(a - 1, b);
+  let result = [];
+  for (let i = a; i <= b; i++) {
+    result.push(str[i - 1]);
+  }
+  return result.join("");
 }
 
 /**
