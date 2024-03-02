@@ -66,7 +66,12 @@ function substring(str, a, b) {
  * */
 
 function isInclude(a, b) {
-  return a.includes(b);
+  // return a.includes(b);
+  if (a.indexOf(b) != -1) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /**
