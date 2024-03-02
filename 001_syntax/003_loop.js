@@ -14,7 +14,10 @@ function printOneToTen() {
  * */
 
 function printOneToTenDesc() {
-  for (i = 11; i--; ) {
+  // for (i = 11; i--; ) {
+  //   console.log(i);
+  // }
+  for (i = 10; i >= 0; i--) {
     console.log(i);
   }
 }
@@ -26,7 +29,7 @@ function printOneToTenDesc() {
 
 function printOneToTenWhile() {
   let num = 0;
-  while (num < 11) {
+  while (num <= 10) {
     console.log(num);
     num += 1;
   }
