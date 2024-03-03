@@ -51,16 +51,7 @@ function findNum(array, num) {
   // return array.some((value) => {
   //   return value === num;
   // });
-  for (let i = 0; i <= array.length; i++) {
-    if (!array[i] === num) {
-      if (array[array.length - 1] === num) {
-        return false;
-      }
-      findNum(array, num);
-    }
-
-    return true;
-  }
+  return array.includes(num);
 }
 
 /**
