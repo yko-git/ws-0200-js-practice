@@ -31,9 +31,12 @@ function getPersonObject() {
  */
 
 function mutateObject(person) {
-  person.name = "Mary";
-  person.age = 37;
-  person.gender = "female";
+  const shallowClone = (person) => {
+    return Object.assign({}, obj);
+  };
+  const obj = { name: "Mary", age: 37, gender: "female" };
+  const cloneObj = shallowClone(obj);
+  return cloneObj;
 }
 
 /**
