@@ -1,4 +1,3 @@
-
 /**
  *  クラスの定義
  *
@@ -8,6 +7,7 @@
  *     sayHi()メソッドでは、 Hi!! という文字列を標準出力するように実装してください
  *  2. Personクラスにクラスメソッドdescribe()を実装してください
  *     describeメソッドでは、This is a Person class という文字列を表示するように実装してください
+ *
  *  3. Personクラスにname, age, bioフィールドを追加してください
  *     デフォルト値はname => '', age => 0, bio => ''
  *  4. Personクラスにコンストラクタを宣言して、name, age, bioフィールドを初期化できるようにしてください
@@ -22,19 +22,43 @@
  */
 
 class Person {
+  name = "";
+  age = 0;
+  bio = "";
+
+  constructor(name, age, bio) {
+    this.name = name;
+    this.age = age;
+    this.bio = bio;
+  }
+
+  sayHi() {
+    console.log("Hi!!");
+  }
+  static describe() {
+    console.log("This is a Person class");
+  }
+
+  get isUnderage() {
+    return this.age <= 20;
+  }
+
+  toString() {
+    return `name: ${this.name}, age: ${this.age}, bio: ${this.bio}`;
+  }
 }
 
-function main () {
-  const person = new Person('ichiro', 54, 'I like to play baseball')
-  person.sayHi()
-  Person.describe()
-  person.isUnderage
+function main() {
+  const person = new Person("ichiro", 54, "I like to play baseball");
+  person.sayHi();
+  Person.describe();
+  person.isUnderage;
 
-  person.bio = 'I like to play basketball'
-  return person.toString()
+  person.bio = "I like to play basketball";
+  return person.toString();
 }
 
 module.exports = {
   Person,
-  main
-}
+  main,
+};
