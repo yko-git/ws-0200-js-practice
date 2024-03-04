@@ -41,7 +41,6 @@ class Dog extends Animal {
   }
   bark() {
     console.log("wang, wang!");
-    super.bark();
   }
 }
 class Duck extends Animal {
@@ -52,7 +51,6 @@ class Duck extends Animal {
   }
   bark() {
     console.log("quack, quack!");
-    super.bark();
   }
 }
 class Chicken extends Animal {
@@ -63,7 +61,6 @@ class Chicken extends Animal {
   }
   bark() {
     console.log("cock-a-doodle-do!");
-    super.bark();
   }
 }
 
