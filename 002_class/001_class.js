@@ -22,11 +22,7 @@
  */
 
 class Person {
-  name = "";
-  age = 0;
-  bio = "";
-
-  constructor(name, age, bio) {
+  constructor(name = "", age = 0, bio = "") {
     this.name = name;
     this.age = age;
     this.bio = bio;
@@ -40,7 +36,7 @@ class Person {
   }
 
   get isUnderage() {
-    return this.age <= 20;
+    return this.age < 20;
   }
 
   toString() {
