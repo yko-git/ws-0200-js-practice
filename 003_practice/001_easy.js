@@ -1,4 +1,3 @@
-
 /**
  *  文字列の長さ
  *
@@ -12,6 +11,11 @@
  */
 
 function length(str) {
+  let ans = 0;
+  for (let i = 1; i <= str.length; i++) {
+    ans++;
+  }
+  return ans;
 }
 
 /**
@@ -26,6 +30,9 @@ function length(str) {
  *
  */
 function reverse(str) {
+  let strArray = [...str];
+  strArray.reverse();
+  return strArray.join("");
 }
 
 /**
@@ -41,6 +48,7 @@ function reverse(str) {
  */
 
 function findIndex(str, char) {
+  return str.indexOf(char);
 }
 
 /**
@@ -56,6 +64,7 @@ function findIndex(str, char) {
  */
 
 function split(a, b) {
+  return a.split(b);
 }
 
 /**
@@ -71,6 +80,10 @@ function split(a, b) {
  */
 
 function sum(array) {
+  const sum = array.reduce((pre, current) => {
+    return pre + current;
+  }, 0);
+  return sum;
 }
 
 /**
@@ -88,6 +101,15 @@ function sum(array) {
  */
 
 function average(array) {
+  if (array.length === 0) {
+    return 0;
+  } else {
+    const sum = array.reduce((pre, current) => {
+      return pre + current;
+    }, 0);
+    const average = sum / array.length;
+    return Math.floor(average);
+  }
 }
 
 /**
@@ -103,6 +125,7 @@ function average(array) {
  */
 
 function concat(a, b) {
+  return a.concat(b);
 }
 
 /**
@@ -118,6 +141,7 @@ function concat(a, b) {
  */
 
 function size(array) {
+  return array.length;
 }
 
 /**
@@ -134,6 +158,12 @@ function size(array) {
  */
 
 function minMax(array) {
+  const max = Math.max(...array);
+  const min = Math.min(...array);
+
+  if (array.length >= 1) {
+    return console.log(`max: ${max}, min: ${min}`);
+  }
 }
 
 /**
@@ -148,6 +178,13 @@ function minMax(array) {
  */
 
 function seq(num) {
+  let ans = 0;
+  let result = [];
+  while (ans <= num - 1) {
+    result.push(ans);
+    ans += 1;
+  }
+  return result;
 }
 
 /**
@@ -163,6 +200,13 @@ function seq(num) {
  */
 
 function omitSeq(num) {
+  let ans = 0;
+  let result = [];
+  while (ans <= num) {
+    result.push(ans);
+    ans += 1;
+  }
+  return result.filter((value) => value % 2 == 1);
 }
 
 /**
@@ -178,9 +222,8 @@ function omitSeq(num) {
  */
 
 function filter(array, num) {
+  return array.filter((value) => value <= num);
 }
-
-
 
 /**
  *  Fizz Buzz
@@ -205,7 +248,18 @@ function filter(array, num) {
  *    ...
  */
 
-function fizzBuzz () {
+function fizzBuzz() {
+  for (let i = 1; i <= 100; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log(`${i} FizzBuzz`);
+    } else if (i % 3 === 0) {
+      console.log(`${i} Fizz`);
+    } else if (i % 5 === 0) {
+      console.log(`${i} Buzz`);
+    } else {
+      console.log(i);
+    }
+  }
 }
 
 module.exports = {
@@ -222,5 +276,5 @@ module.exports = {
   seq,
   filter,
   omitSeq,
-  fizzBuzz
-}
+  fizzBuzz,
+};
