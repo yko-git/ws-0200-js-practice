@@ -77,7 +77,16 @@ function countStr(s1, s2) {
  *
  */
 
-function isPalindrome(str) {}
+function isPalindrome(str) {
+  const strArray = [...str];
+  const strReverse = [...str].reverse();
+
+  if (strArray.toString() === strReverse.toString()) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 /**
  *  素数
@@ -93,7 +102,15 @@ function isPalindrome(str) {}
  *    11 => True
  *
  */
-function isPrime(num) {}
+function isPrime(num) {
+  if (num === 2 || num === 3) {
+    return true;
+  } else if (num === 1 || num % 2 === 0 || num % 3 === 0) {
+    return false;
+  } else {
+    return true;
+  }
+}
 
 /**
  *  配列の4と次の数字を抜いた合計
@@ -110,7 +127,21 @@ function isPrime(num) {}
  *    [4] => 0
  *
  */
-function sumWithout4andNext(array) {}
+function sumWithout4andNext(array) {
+  let sumArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === 4) {
+      sumArray.push(0);
+      array[i + 1] = 0;
+    } else {
+      sumArray.push(array[i]);
+    }
+  }
+  const sum = sumArray.reduce((pre, current) => {
+    return pre + current;
+  });
+  return sum;
+}
 
 module.exports = {
   rotate,
