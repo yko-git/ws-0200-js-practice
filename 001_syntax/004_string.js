@@ -46,12 +46,20 @@ function lastChar(str) {
  */
 
 function substring(str, a, b) {
-  // return str.substring(a - 1, b);
-  let result = [];
-  for (let i = a; i <= b; i++) {
-    result.push(str[i - 1]);
+  if (str === "") {
+    return "";
   }
-  return result.join("");
+  let result = "";
+
+  let numB = b;
+  if (numB >= str.length) {
+    numB = str.length;
+  }
+
+  for (let i = a; i <= numB; i++) {
+    result = result + str[i - 1];
+  }
+  return result;
 }
 
 /**
@@ -66,11 +74,40 @@ function substring(str, a, b) {
  * */
 
 function isInclude(a, b) {
-  // return a.includes(b);
-  if (a.indexOf(b) != -1) {
+  //bの文字列が空だったらtrue
+  if (!b) {
     return true;
-  } else {
+  } else if (!a) {
     return false;
+  }
+  //bの一文字目（w）を調べる対象searchとする
+  let search = b[0];
+
+  for (let i = 0; i < a.length; i++) {
+    //wをcursorとする
+    const cursor = a[i];
+
+    //bの1行目とaの1行目が合致したら(w : w)
+    if (search === cursor) {
+      for (let j = i + 1; j < a.length; j++) {
+        //bIndexは(1)
+        const bIndex = j - i;
+
+        //bの次のoが o == oでなかったら
+        if (a[j] !== b[bIndex]) {
+          //searchを1文字目の対象に戻す(w)
+          search = b[0];
+          //プログラムの制御を終了
+          break;
+        }
+        //bの文字列-1(3)がbIndex(1)以上だったら
+        if (bIndex >= b.length - 1) {
+          return true;
+        }
+      }
+    } else {
+      return false;
+    }
   }
 }
 
