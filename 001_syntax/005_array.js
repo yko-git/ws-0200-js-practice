@@ -48,10 +48,13 @@ function getDays() {
  */
 
 function findNum(array, num) {
-  // return array.some((value) => {
-  //   return value === num;
-  // });
-  return array.includes(num);
+  for (let i = 0; i < array.length; i++) {
+    const cursor = array[i];
+    if (cursor === num) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /**
@@ -65,8 +68,19 @@ function findNum(array, num) {
  */
 
 function isDuplicate(array) {
-  const setArray = new Set(array);
-  return setArray.size !== array.length;
+  for (let i = 0; i < array.length; i++) {
+    // 対象の配列を定義
+    const cursor = array[i];
+
+    //次の要素をループをネストして取得
+    for (let j = i + 1; j < array.length; j++) {
+      //対象の要素と比較する要素が同じだったら
+      if (cursor === array[j]) {
+        return true;
+      }
+    }
+  }
+  return false;
 }
 
 module.exports = {
