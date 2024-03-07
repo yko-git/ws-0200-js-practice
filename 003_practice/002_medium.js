@@ -60,9 +60,10 @@ function removeVowels(str) {
  *
  */
 function countStr(s1, s2) {
-  const search = /s2/g;
+  //RegExpで正規表現をコンパイルしてから使用する
+  const search = new RegExp(s2, "g");
   const searchStr = s1.match(search);
-  return console.log(searchStr.length);
+  return searchStr.length;
 }
 
 /**
@@ -128,15 +129,28 @@ function isPrime(num) {
  *
  */
 function sumWithout4andNext(array) {
+  //空の配列をsumArrayを定義
   let sumArray = [];
+
+  //array分ループを回す
   for (let i = 0; i < array.length; i++) {
+    //array[1]が4だったら
     if (array[i] === 4) {
+      //sumArrayに0をpush
       sumArray.push(0);
-      array[i + 1] = 0;
+
+      //次の要素も4だった場合
+      if (array[i + 1] === 4) {
+        //次の要素も0にする
+        array[i] = 0;
+      } else {
+        array[i + 1] = 0;
+      }
     } else {
       sumArray.push(array[i]);
     }
   }
+
   const sum = sumArray.reduce((pre, current) => {
     return pre + current;
   });
