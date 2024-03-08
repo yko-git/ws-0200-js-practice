@@ -77,9 +77,19 @@ function assignNumber(persons) {
  *
  */
 
-function isDuplicate(obj) {
-  const setObj = new Set(obj);
-  return setObj.size !== obj.length;
+function isDuplicate(array) {
+  let obj = {};
+  for (let i = 0; i < array.length; i++) {
+    //配列の要素をvalueに代入
+    const value = array[i];
+
+    //objに配列要素があったら
+    if (obj[value]) {
+      return true;
+    }
+    obj[value] = true;
+  }
+  return false;
 }
 
 module.exports = {
