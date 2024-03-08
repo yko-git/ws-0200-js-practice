@@ -121,10 +121,10 @@ class List {
    */
   filter(target) {
     // TODO:
-    let result = [];
-    for (let value of this.data) {
-      while (value === target) {
-        return result.push(value);
+    let result = new List(this.data);
+    for (let i = 0; i <= result.length; i++) {
+      if (result[i] === target) {
+        result.splice(i, 1);
       }
     }
     return result;
