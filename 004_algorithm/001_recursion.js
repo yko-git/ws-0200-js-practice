@@ -103,13 +103,11 @@ function fibonacci(num) {
  */
 
 function fileSize(node, sum = 0) {
-  let sumNum = 0;
-
   if (node["children"]) {
     for (let value of node.children) {
-      sumNum = sumNum + value.size;
+      sum = sum + value.size;
     }
-    return sumNum;
+    return sum;
   } else {
     return node.size;
   }
