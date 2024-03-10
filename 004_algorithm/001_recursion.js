@@ -1,4 +1,3 @@
-
 /**
  *  数列の和
  *
@@ -10,7 +9,12 @@
  *    30 => 55
  */
 
-function sumSequence (n, sum = 0) {
+function sumSequence(n, sum = 0) {
+  //引数nが最後の1になったら
+  if (n < 2) {
+    return 1;
+  }
+  return n + sumSequence(n - 1);
 }
 
 /**
@@ -23,9 +27,28 @@ function sumSequence (n, sum = 0) {
  *    input: 10 => [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
  */
 
-function fibonacci (num) {
-}
+function fibonacci(num) {
+  // 空の配列を定義
+  let array = [];
 
+  // fibo関数を定義
+  const fibo = (n) => {
+    //引数nが最後の2までは
+    if (n <= 2) {
+      // 1を返す
+      return 1;
+    } else {
+      return fibo(n - 2) + fibo(n - 1);
+    }
+  };
+
+  // fibo関数をループで処理して配列に代入
+  for (let i = 1; i <= num; i++) {
+    array.push(fibo(i));
+  }
+
+  return array;
+}
 
 /**
  *  2.4.2 ディレクトリに含まれるファイルサイズの合計
@@ -79,12 +102,21 @@ function fibonacci (num) {
  *    => 38
  */
 
-function fileSize (node, sum = 0) {
-}
+function fileSize(node, sum = 0) {
+  let sumNum = 0;
 
+  if (node["children"]) {
+    for (let value of node.children) {
+      sumNum = sumNum + value.size;
+    }
+    return sumNum;
+  } else {
+    return node.size;
+  }
+}
 
 module.exports = {
   sumSequence,
   fibonacci,
-  fileSize
-}
+  fileSize,
+};
