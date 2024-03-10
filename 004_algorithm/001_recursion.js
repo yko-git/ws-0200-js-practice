@@ -103,6 +103,14 @@ function fibonacci(num) {
  */
 
 function fileSize(node, sum = 0) {
+  let dep = [];
+
+  for (let value in Object.values(node)) {
+    dep.push(Number(value));
+  }
+
+  console.log(dep.length); //配列の深さ
+
   if (node["children"]) {
     for (let value of node.children) {
       sum = sum + value.size;
