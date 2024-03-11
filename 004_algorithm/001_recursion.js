@@ -101,22 +101,27 @@ function fibonacci(num) {
  *    }
  *    => 38
  */
-
 function fileSize(node, sum = 0) {
-  let dep = [];
-
-  for (let value in Object.values(node)) {
-    dep.push(Number(value));
-  }
-
-  console.log(dep.length); //配列の深さ
+  const keys = Object.keys(node);
 
   if (node["children"]) {
-    for (let value of node.children) {
-      sum = sum + value.size;
+    //nodeをループ
+    for (let i = 0; i < keys.length; i++) {
+      const key = keys[i];
+      const value = node[key];
+
+      //valueにオブジェクトがあったら再起
+      if (value.constructor === Object && !value.length) {
+        return fileSize(node, (sum = 0));
+      } else {
+        for (let value of node.children) {
+          sum = sum + value.size;
+        }
+        return sum;
+      }
     }
-    return sum;
   } else {
+    //なければsizeをそのまま出力
     return node.size;
   }
 }
