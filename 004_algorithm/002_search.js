@@ -30,21 +30,29 @@ function linearSearch(array, target) {
  */
 
 function binarySearch(array, target) {
-  let mid = Math.floor(array.length / 2);
-  let index = -1;
+  // 配列の位置を設定
+  let low = 0; //左端
+  let high = array.length - 1; //右端
 
-  for (let i = 0; i < mid; i++) {
-    if (array[i] === target) {
-      return (index = i);
-    }
+  //左端が右端以下の間（1つの要素に絞られるまで）は処理を続ける
+  while (low <= high) {
+    mid = low + high; // 真ん中の位置
+    guess = array[mid]; // 真ん中の要素
 
-    for (let j = array.length; j >= mid; j--) {
-      if (array[j] === target) {
-        return (index = j);
-      }
+    //真ん中の要素がtargetと合致したら
+    if (guess == target) {
+      //位置を返す
+      return mid;
+
+      //真ん中の要素がtargetより大きかったら
+    } else if (guess > target) {
+      //右端の位置は要素の位置-1
+      high = mid - 1;
+    } else {
+      low = mid + 1;
     }
-    return index;
   }
+  return -1;
 }
 
 module.exports = {
