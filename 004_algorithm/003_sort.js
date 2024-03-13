@@ -38,6 +38,19 @@ function bubbleSort(array) {
  */
 
 function insertSort(array) {
+  for (let i = 1; i < array.length; i++) {
+    let j;
+    let tmp = array[i]; //挿入する値
+
+    for (j = i - 1; j >= 0; j--) {
+      if (array[j] > tmp) {
+        array[j + 1] = array[j];
+      } else {
+        break;
+      }
+    }
+    array[j + 1] = tmp;
+  }
   return array;
 }
 
