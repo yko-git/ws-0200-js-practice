@@ -111,13 +111,12 @@ function sum(array) {
 function average(array) {
   if (array.length === 0) {
     return 0;
-  } else {
-    const sum = array.reduce((pre, current) => {
-      return pre + current;
-    }, 0);
-    const average = sum / array.length;
-    return Math.floor(average);
   }
+  const sum = array.reduce((pre, current) => {
+    return pre + current;
+  }, 0);
+  const average = sum / array.length;
+  return Math.floor(average);
 }
 
 /**
