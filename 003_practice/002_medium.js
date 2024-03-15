@@ -80,10 +80,12 @@ function countStr(s1, s2) {
  */
 
 function isPalindrome(str) {
-  const strArray = [...str];
-  const strReverse = [...str].reverse();
-
-  return strArray.toString() === strReverse.toString();
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**
