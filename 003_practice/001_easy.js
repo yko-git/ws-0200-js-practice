@@ -155,7 +155,11 @@ function concat(a, b) {
  */
 
 function size(array) {
-  return array.length;
+  let ans = 0;
+  for (let value of array) {
+    ans++;
+  }
+  return ans;
 }
 
 /**
