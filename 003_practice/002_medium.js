@@ -134,32 +134,15 @@ function isPrime(num) {
  *
  */
 function sumWithout4andNext(array) {
-  //空の配列をsumArrayを定義
-  let sumArray = [];
+  let total = 0;
 
-  //array分ループを回す
   for (let i = 0; i < array.length; i++) {
-    //array[1]が4だったら
-    if (array[i] === 4) {
-      //sumArrayに0をpush
-      sumArray.push(0);
-
-      //次の要素も4だった場合
-      if (array[i + 1] === 4) {
-        //次の要素も0にする
-        array[i] = 0;
-      } else {
-        array[i + 1] = 0;
-      }
-    } else {
-      sumArray.push(array[i]);
+    if (array[i - 1] !== 4 && array[i] !== 4) {
+      total += array[i];
     }
   }
 
-  const sum = sumArray.reduce((pre, current) => {
-    return pre + current;
-  });
-  return sum;
+  return total;
 }
 
 module.exports = {
