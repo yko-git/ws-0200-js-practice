@@ -43,7 +43,6 @@ function removeVowels(str) {
       str[i] !== "o" ||
       str[i] !== "u"
     ) {
-      console.log(str[i]);
       newStr += str[i];
     }
   }
@@ -84,11 +83,7 @@ function isPalindrome(str) {
   const strArray = [...str];
   const strReverse = [...str].reverse();
 
-  if (strArray.toString() === strReverse.toString()) {
-    return true;
-  } else {
-    return false;
-  }
+  return strArray.toString() === strReverse.toString();
 }
 
 /**
