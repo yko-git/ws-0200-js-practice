@@ -103,13 +103,19 @@ function isPalindrome(str) {
  *
  */
 function isPrime(num) {
-  if (num === 2 || num === 3) {
-    return true;
-  } else if (num === 1 || num % 2 === 0 || num % 3 === 0) {
-    return false;
-  } else {
-    return true;
+  //numが2桁以上の場合
+  if (num.length >= 2) {
+    num = Array.from(String(num), Number);
+    for (let i = 0; i < num.length; i++) {
+      num = num[i] + num[i + 1];
+    }
   }
+  for (let i = 0; i <= num; i++) {
+    if (num % i === 0 || num === 1 || num === 2) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**
