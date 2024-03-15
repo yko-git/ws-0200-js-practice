@@ -65,10 +65,37 @@ function insertSort(array) {
  */
 
 function mergeSort(arr) {
-  return arr;
+  // arrの要素数が1だったらそのまま返す
+  if (arr.length === 1) {
+    return arr;
+  }
+  // 配列の中心centerを算出してleftとrightに分割
+  const center = Math.floor(arr.length / 2);
+  const left = arr.slice(0, center);
+  const right = arr.slice(center);
+
+  // arr.length === 1になるまで再起的に処理を呼び出し続ける
+  return merge(mergeSort(left), mergeSort(right));
 }
 
-function merge(left, right) {}
+function merge(left, right) {
+  //空の配列を定義
+  const result = [];
+
+  //leftかrightのどちらかが空になるまで
+  while (left.length && right.length) {
+    //配列の先頭の大きさを比較
+    if (left[0] < right[0]) {
+      //小さい方をleftから先頭要素を取り出し、resultにpush
+      result.push(left.shift());
+    } else {
+      //大きい方をrightから先頭要素を取り出し、resultにpush
+      result.push(right.shift());
+    }
+  }
+  //result,left,rightを合体させて返す
+  return [...result, ...left, ...right];
+}
 
 /**
  *  2.2.4 クイックソート
