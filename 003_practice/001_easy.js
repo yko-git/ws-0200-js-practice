@@ -218,13 +218,13 @@ function seq(num) {
  */
 
 function omitSeq(num) {
-  let ans = 0;
+  let ans = 1;
   let result = [];
   while (ans <= num) {
     result.push(ans);
-    ans += 1;
+    ans += 2;
   }
-  return result.filter((value) => value % 2 == 1);
+  return result;
 }
 
 /**
