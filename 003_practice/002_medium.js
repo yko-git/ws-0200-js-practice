@@ -33,19 +33,21 @@ function rotate(str, num) {
  *
  */
 function removeVowels(str) {
-  let strArray = [...str];
-  strArray.forEach((value) => {
+  let newStr = "";
+
+  for (let i = 0; i < str.length; i++) {
     if (
-      value === "a" ||
-      value === "e" ||
-      value === "i" ||
-      value === "o" ||
-      value === "u"
+      str[i] !== "a" ||
+      str[i] !== "e" ||
+      str[i] !== "i" ||
+      str[i] !== "o" ||
+      str[i] !== "u"
     ) {
-      strArray.splice(strArray.indexOf(value), 1, "");
+      console.log(str[i]);
+      newStr += str[i];
     }
-  });
-  return strArray.join("");
+  }
+  return newStr;
 }
 
 /**
