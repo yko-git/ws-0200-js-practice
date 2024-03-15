@@ -12,7 +12,7 @@
 
 function length(str) {
   let ans = 0;
-  for (let i = 1; i <= str.length; i++) {
+  for (let value of str) {
     ans++;
   }
   return ans;
