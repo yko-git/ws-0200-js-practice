@@ -30,12 +30,12 @@ function length(str) {
  *
  */
 function reverse(str) {
-  let strArray = [];
+  let newStr = "";
   //後ろ側から取り出して並べる
   for (let i = str.length - 1; i >= 0; i--) {
-    strArray.push(str[i]);
+    newStr += str[i];
   }
-  return strArray.join("");
+  return newStr;
 }
 
 /**
