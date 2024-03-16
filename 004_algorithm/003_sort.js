@@ -108,6 +108,18 @@ function merge(left, right) {
  */
 
 function quickSort(a, start = 0, end = a.length - 1) {
+  let pivot = a[Math.floor(start + end / 2)];
+  for (let i = start; i <= a.indexOf(pivot); i++) {
+    for (let j = a.indexOf(pivot) + 1; j <= end; j++) {
+      if (pivot < a[i]) {
+        a[a.indexOf(pivot) + 1] = a[i];
+      }
+      if (pivot > a[j]) {
+        a[a.indexOf(pivot) - 1] = a[j];
+      }
+    }
+  }
+
   return a;
 }
 
