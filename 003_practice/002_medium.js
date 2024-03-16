@@ -103,15 +103,12 @@ function isPalindrome(str) {
  *
  */
 function isPrime(num) {
-  //numが2桁以上の場合
-  if (num.length >= 2) {
-    num = Array.from(String(num), Number);
-    for (let i = 0; i < num.length; i++) {
-      num = num[i] + num[i + 1];
-    }
+  //numが2の場合
+  if (num === 1) {
+    return false;
   }
-  for (let i = 0; i <= num; i++) {
-    if (num % i === 0 || num === 1 || num === 2) {
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
       return false;
     }
   }
