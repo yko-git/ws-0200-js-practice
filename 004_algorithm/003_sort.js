@@ -65,8 +65,8 @@ function insertSort(array) {
  */
 
 function mergeSort(arr) {
-  // arrの要素数が1だったらそのまま返す
-  if (arr.length === 1) {
+  // arrの要素数が1以下だったらそのままarrを返す
+  if (arr.length <= 1) {
     return arr;
   }
   // 配列の中心centerを算出してleftとrightに分割
@@ -74,7 +74,7 @@ function mergeSort(arr) {
   const left = arr.slice(0, center);
   const right = arr.slice(center);
 
-  // arr.length === 1になるまで再起的に処理を呼び出し続ける
+  // arr.length <= 1になるまで再起的にmarge関数を呼び出し続ける
   return merge(mergeSort(left), mergeSort(right));
 }
 
@@ -82,7 +82,7 @@ function merge(left, right) {
   //空の配列を定義
   const result = [];
 
-  //leftかrightのどちらかが空になるまで
+  //leftかrightのどちらかが空になるまで処理を繰り返す
   while (left.length && right.length) {
     //配列の先頭の大きさを比較
     if (left[0] < right[0]) {
