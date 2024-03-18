@@ -107,20 +107,36 @@ function merge(left, right) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function quickSort(a, start = 0, end = a.length - 1) {
-  let pivot = a[Math.floor(start + end / 2)];
-  for (let i = start; i <= a.indexOf(pivot); i++) {
-    for (let j = a.indexOf(pivot) + 1; j <= end; j++) {
-      if (pivot < a[i]) {
-        a[a.indexOf(pivot) + 1] = a[i];
-      }
-      if (pivot > a[j]) {
-        a[a.indexOf(pivot) - 1] = a[j];
-      }
+function quickSort(a) {
+  // 配列の要素数が1以下の場合は、そのまま返す
+  if (a.length <= 1) {
+    return a;
+  }
+
+  // 基準となる配列の中心要素を定義
+  const pivot = a[Math.floor(a.length / 2)];
+
+  // 基準となる要素を除いた、左側の配列
+  const left = [];
+  // 基準となる要素を除いた、右側の配列
+  const right = [];
+
+  // 基準となる要素を除いた配列を作成
+  for (let i = 0; i < a.length; i++) {
+    // iが中心要素だった場合は更新式にジャンプ
+    if (i === Math.floor(a.length / 2)) {
+      continue;
+    }
+    // 比較要素がpivotより小さい場合
+    if (a[i] < pivot) {
+      left.push(a[i]);
+    } else {
+      right.push(a[i]);
     }
   }
 
-  return a;
+  // 再帰的に処理を行い、結果を返す
+  return [...quickSort(left), pivot, ...quickSort(right)];
 }
 
 module.exports = {
