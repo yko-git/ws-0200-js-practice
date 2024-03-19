@@ -12,7 +12,7 @@
 
 function length(str) {
   let ans = 0;
-  for (let i = 1; i <= str.length; i++) {
+  while (str[ans]) {
     ans++;
   }
   return ans;
@@ -30,9 +30,12 @@ function length(str) {
  *
  */
 function reverse(str) {
-  let strArray = [...str];
-  strArray.reverse();
-  return strArray.join("");
+  let newStr = "";
+  //後ろ側から取り出して並べる
+  for (let i = str.length - 1; i >= 0; i--) {
+    newStr += str[i];
+  }
+  return newStr;
 }
 
 /**
@@ -48,7 +51,12 @@ function reverse(str) {
  */
 
 function findIndex(str, char) {
-  return str.indexOf(char);
+  for (let i = 0; i < str.length - 1; i++) {
+    if (str[i] === char) {
+      return i;
+    }
+  }
+  return -1;
 }
 
 /**
@@ -103,13 +111,13 @@ function sum(array) {
 function average(array) {
   if (array.length === 0) {
     return 0;
-  } else {
-    const sum = array.reduce((pre, current) => {
-      return pre + current;
-    }, 0);
-    const average = sum / array.length;
-    return Math.floor(average);
   }
+
+  let average = 0;
+  for (let i = 0; i < array.length; i++) {
+    average += array[i];
+  }
+  return Math.floor(average / array.length);
 }
 
 /**
@@ -125,7 +133,7 @@ function average(array) {
  */
 
 function concat(a, b) {
-  return a.concat(b);
+  return [...a, ...b];
 }
 
 /**
@@ -141,7 +149,11 @@ function concat(a, b) {
  */
 
 function size(array) {
-  return array.length;
+  let ans = 0;
+  for (let value of array) {
+    ans++;
+  }
+  return ans;
 }
 
 /**
@@ -200,13 +212,13 @@ function seq(num) {
  */
 
 function omitSeq(num) {
-  let ans = 0;
+  let ans = 1;
   let result = [];
   while (ans <= num) {
     result.push(ans);
-    ans += 1;
+    ans += 2;
   }
-  return result.filter((value) => value % 2 == 1);
+  return result;
 }
 
 /**

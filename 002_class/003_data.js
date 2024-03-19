@@ -121,10 +121,12 @@ class List {
    */
   filter(target) {
     // TODO:
-    let result = new List(this.data);
-    for (let i = 0; i <= result.length; i++) {
-      if (result[i] === target) {
-        result.splice(i, 1);
+    let result = new List(this.data); //Listインスタンスを作成
+    //自身で作成したsizeを使用
+    for (let i = 0; i <= result.size; i++) {
+      //自身で作成したindexを使用
+      if (result.index(i) === target) {
+        result.remove(i); //自身で作成したremoveを使用
       }
     }
     return result;

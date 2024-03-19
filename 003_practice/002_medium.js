@@ -33,19 +33,20 @@ function rotate(str, num) {
  *
  */
 function removeVowels(str) {
-  let strArray = [...str];
-  strArray.forEach((value) => {
+  let newStr = "";
+
+  for (let i = 0; i < str.length; i++) {
     if (
-      value === "a" ||
-      value === "e" ||
-      value === "i" ||
-      value === "o" ||
-      value === "u"
+      str[i] !== "a" &&
+      str[i] !== "e" &&
+      str[i] !== "i" &&
+      str[i] !== "o" &&
+      str[i] !== "u"
     ) {
-      strArray.splice(strArray.indexOf(value), 1, "");
+      newStr += str[i];
     }
-  });
-  return strArray.join("");
+  }
+  return newStr;
 }
 
 /**
@@ -79,14 +80,12 @@ function countStr(s1, s2) {
  */
 
 function isPalindrome(str) {
-  const strArray = [...str];
-  const strReverse = [...str].reverse();
-
-  if (strArray.toString() === strReverse.toString()) {
-    return true;
-  } else {
-    return false;
+  for (let i = 0; i < str.length / 2; i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false;
+    }
   }
+  return true;
 }
 
 /**
@@ -104,13 +103,16 @@ function isPalindrome(str) {
  *
  */
 function isPrime(num) {
-  if (num === 2 || num === 3) {
-    return true;
-  } else if (num === 1 || num % 2 === 0 || num % 3 === 0) {
+  //numが2の場合
+  if (num === 1) {
     return false;
-  } else {
-    return true;
   }
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
 }
 
 /**
@@ -129,32 +131,15 @@ function isPrime(num) {
  *
  */
 function sumWithout4andNext(array) {
-  //空の配列をsumArrayを定義
-  let sumArray = [];
+  let total = 0;
 
-  //array分ループを回す
   for (let i = 0; i < array.length; i++) {
-    //array[1]が4だったら
-    if (array[i] === 4) {
-      //sumArrayに0をpush
-      sumArray.push(0);
-
-      //次の要素も4だった場合
-      if (array[i + 1] === 4) {
-        //次の要素も0にする
-        array[i] = 0;
-      } else {
-        array[i + 1] = 0;
-      }
-    } else {
-      sumArray.push(array[i]);
+    if (array[i - 1] !== 4 && array[i] !== 4) {
+      total += array[i];
     }
   }
 
-  const sum = sumArray.reduce((pre, current) => {
-    return pre + current;
-  });
-  return sum;
+  return total;
 }
 
 module.exports = {
