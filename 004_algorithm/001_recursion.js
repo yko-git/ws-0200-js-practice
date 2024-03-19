@@ -101,15 +101,22 @@ function fibonacci(num) {
  *    }
  *    => 38
  */
-
 function fileSize(node, sum = 0) {
-  if (node["children"]) {
-    for (let value of node.children) {
-      sum = sum + value.size;
-    }
-    return sum;
+  //現在の合計値を定義（0）
+  let currentSum = sum;
+
+  //nodeにchildrenがあるか判定
+  if (node.children) {
+    // childrenをループ
+    node.children.forEach((value) => {
+      //合計値にループした要素を指定した再帰関数を足す
+      currentSum += fileSize(value, sum);
+    });
+
+    return currentSum;
   } else {
-    return node.size;
+    // これまでの合計と今のノードを足して返す
+    return sum + node.size;
   }
 }
 
