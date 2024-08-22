@@ -3,11 +3,7 @@
  *
  */
 
-function printArray(array) {
-  for (let value of array) {
-    console.log(value);
-  }
-}
+function printArray(array) {}
 
 /**
  *  5.2 関数内で全ての曜日を配列として宣言して返却するメソッドを実装してください
@@ -24,18 +20,7 @@ function printArray(array) {
  *      ]
  *
  */
-function getDays() {
-  const days = [
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-    "Sunday",
-  ];
-  return days;
-}
+function getDays() {}
 
 /**
  *  5.3 配列に特定の数があった場合にtrue、そうでない場合にfalseを返す関数を実装してください
@@ -47,15 +32,7 @@ function getDays() {
  *
  */
 
-function findNum(array, num) {
-  for (let i = 0; i < array.length; i++) {
-    const cursor = array[i];
-    if (cursor === num) {
-      return true;
-    }
-  }
-  return false;
-}
+function findNum(array, num) {}
 
 /**
  *  5.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください
@@ -67,21 +44,7 @@ function findNum(array, num) {
  *
  */
 
-function isDuplicate(array) {
-  for (let i = 0; i < array.length; i++) {
-    // 対象の配列を定義
-    const cursor = array[i];
-
-    //次の要素をループをネストして取得
-    for (let j = i + 1; j < array.length; j++) {
-      //対象の要素と比較する要素が同じだったら
-      if (cursor === array[j]) {
-        return true;
-      }
-    }
-  }
-  return false;
-}
+function isDuplicate(array) {}
 
 module.exports = {
   printArray,

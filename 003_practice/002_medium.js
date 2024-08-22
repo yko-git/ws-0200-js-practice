@@ -9,17 +9,7 @@
  *    'library', -1 => 'ibraryl'
  *
  */
-function rotate(str, num) {
-  if (num <= 0) {
-    const str1 = str.slice(num + Math.abs(num + num));
-    const str2 = str.slice(0, num + Math.abs(num + num));
-    return str1 + str2;
-  } else {
-    const str1 = str.slice(-num);
-    const str2 = str.slice(0, str.length - num);
-    return str1 + str2;
-  }
-}
+function rotate(str, num) {}
 
 /**
  *  母音を除いた文字列
@@ -32,21 +22,7 @@ function rotate(str, num) {
  *    'banana' => 'bnn'
  *
  */
-function removeVowels(str) {
-  let strArray = [...str];
-  strArray.forEach((value) => {
-    if (
-      value === "a" ||
-      value === "e" ||
-      value === "i" ||
-      value === "o" ||
-      value === "u"
-    ) {
-      strArray.splice(strArray.indexOf(value), 1, "");
-    }
-  });
-  return strArray.join("");
-}
+function removeVowels(str) {}
 
 /**
  *  文字列のカウント
@@ -59,12 +35,7 @@ function removeVowels(str) {
  *    'hogehoage',  'hoge' => 1
  *
  */
-function countStr(s1, s2) {
-  //RegExpで正規表現をコンパイルしてから使用する
-  const search = new RegExp(s2, "g");
-  const searchStr = s1.match(search);
-  return searchStr.length;
-}
+function countStr(s1, s2) {}
 
 /**
  *  引数に与えられたアルファベットの文字列が回文であること
@@ -78,16 +49,7 @@ function countStr(s1, s2) {
  *
  */
 
-function isPalindrome(str) {
-  const strArray = [...str];
-  const strReverse = [...str].reverse();
-
-  if (strArray.toString() === strReverse.toString()) {
-    return true;
-  } else {
-    return false;
-  }
-}
+function isPalindrome(str) {}
 
 /**
  *  素数
@@ -103,15 +65,7 @@ function isPalindrome(str) {
  *    11 => True
  *
  */
-function isPrime(num) {
-  if (num === 2 || num === 3) {
-    return true;
-  } else if (num === 1 || num % 2 === 0 || num % 3 === 0) {
-    return false;
-  } else {
-    return true;
-  }
-}
+function isPrime(num) {}
 
 /**
  *  配列の4と次の数字を抜いた合計
@@ -128,34 +82,7 @@ function isPrime(num) {
  *    [4] => 0
  *
  */
-function sumWithout4andNext(array) {
-  //空の配列をsumArrayを定義
-  let sumArray = [];
-
-  //array分ループを回す
-  for (let i = 0; i < array.length; i++) {
-    //array[1]が4だったら
-    if (array[i] === 4) {
-      //sumArrayに0をpush
-      sumArray.push(0);
-
-      //次の要素も4だった場合
-      if (array[i + 1] === 4) {
-        //次の要素も0にする
-        array[i] = 0;
-      } else {
-        array[i + 1] = 0;
-      }
-    } else {
-      sumArray.push(array[i]);
-    }
-  }
-
-  const sum = sumArray.reduce((pre, current) => {
-    return pre + current;
-  });
-  return sum;
-}
+function sumWithout4andNext(array) {}
 
 module.exports = {
   rotate,
