@@ -10,7 +10,13 @@
  *
  */
 
-function length(str) {}
+function length(str) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    count++;
+  }
+  return count;
+}
 
 /**
  *  文字列の反転
@@ -23,7 +29,13 @@ function length(str) {}
  *    'fizzbuzz' => 'zzubzzif'
  *
  */
-function reverse(str) {}
+function reverse(str) {
+  let reverseText = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    reverseText += str[i];
+  }
+  return reverseText;
+}
 
 /**
  *  指定された文字列の位置を返却
