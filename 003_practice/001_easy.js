@@ -49,7 +49,14 @@ function reverse(str) {
  *
  */
 
-function findIndex(str, char) {}
+function findIndex(str, char) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      return i;
+    }
+  }
+  return -1;
+}
 
 /**
  *  指定された文字列を指定された文字で分割
@@ -63,7 +70,9 @@ function findIndex(str, char) {}
  *
  */
 
-function split(a, b) {}
+function split(a, b) {
+  return a.split(b);
+}
 
 /**
  *  配列の合計
@@ -77,7 +86,13 @@ function split(a, b) {}
  *
  */
 
-function sum(array) {}
+function sum(array) {
+  let result = 0;
+  for (let i = 0; i < array.length; i++) {
+    result += array[i];
+  }
+  return result;
+}
 
 /**
  *  配列の平均
@@ -93,7 +108,13 @@ function sum(array) {}
  *
  */
 
-function average(array) {}
+function average(array) {
+  let result = 0;
+  for (let i = 0; i < array.length; i++) {
+    result += array[i];
+  }
+  return result >= 1 ? Math.floor(result / array.length) : 0;
+}
 
 /**
  *  配列の結合
@@ -107,7 +128,9 @@ function average(array) {}
  *
  */
 
-function concat(a, b) {}
+function concat(a, b) {
+  return [...a, ...b];
+}
 
 /**
  *  2.1.2 配列の個数
@@ -121,7 +144,9 @@ function concat(a, b) {}
  *
  */
 
-function size(array) {}
+function size(array) {
+  return array.length;
+}
 
 /**
  *  2.1.3 配列の最大値と最小値
@@ -136,7 +161,14 @@ function size(array) {}
  *
  */
 
-function minMax(array) {}
+function minMax(array) {
+  if (array.length >= 1) {
+    const max = array.reduce((pre, value) => pre + value);
+    const min = Math.min(...array);
+
+    return `max:${max},min:${min}`;
+  }
+}
 
 /**
  *  連番
@@ -149,7 +181,13 @@ function minMax(array) {}
  *
  */
 
-function seq(num) {}
+function seq(num) {
+  let array = [];
+  for (let i = 0; i < num; i++) {
+    array.push(i);
+  }
+  return array;
+}
 
 /**
  *  奇数の連番
@@ -163,7 +201,15 @@ function seq(num) {}
  *
  */
 
-function omitSeq(num) {}
+function omitSeq(num) {
+  let array = [];
+  for (let i = 0; i <= num; i++) {
+    if (i % 2 == 1) {
+      array.push(i);
+    }
+  }
+  return array;
+}
 
 /**
  *  指定された数値以下の配列
