@@ -9,8 +9,30 @@
  *    'library', -1 => 'ibraryl'
  *
  */
-function rotate(str, num) {}
+function rotate(str, num) {
+  let target1 = [];
+  let target2 = [];
 
+  if (num >= 0) {
+    for (let i = 0; i < str.length; i++) {
+      if (i >= str.length - num) {
+        target1.push(str[i]);
+      } else {
+        target2.push(str[i]);
+      }
+    }
+  } else {
+    for (let i = 0; i < str.length; i++) {
+      if (i >= Math.abs(num)) {
+        target1.push(str[i]);
+      } else {
+        target2.push(str[i]);
+      }
+    }
+  }
+  const targetUnion = target1.concat(target2);
+  return targetUnion.join("");
+}
 /**
  *  母音を除いた文字列
  *
