@@ -68,7 +68,10 @@ function removeVowels(str) {
  *    'hogehoage',  'hoge' => 1
  *
  */
-function countStr(s1, s2) {}
+function countStr(s1, s2) {
+  let pattern = new RegExp(s2, "g");
+  return s1.match(pattern).length;
+}
 
 /**
  *  引数に与えられたアルファベットの文字列が回文であること
