@@ -85,7 +85,20 @@ function countStr(s1, s2) {
  *
  */
 
-function isPalindrome(str) {}
+function isPalindrome(str) {
+  if (str.length === 0) {
+    return true;
+  }
+  for (let i = 0; i < str.length; i++) {
+    for (let j = str.length - 1; j >= 0; j--) {
+      if (str[i] === str[j] || str.length === 0) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  }
+}
 
 /**
  *  素数
