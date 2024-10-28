@@ -1,4 +1,3 @@
-
 /**
  *  2.3.1 リニアサーチ
  *
@@ -11,7 +10,8 @@
  *    [5, 3, 2, 1], 6 => -1
  */
 
-function linearSearch (array, target) {
+function linearSearch(array, target) {
+  return array.indexOf(target);
 }
 
 /**
@@ -24,10 +24,9 @@ function linearSearch (array, target) {
  *    [1, 2, 3, 4] 5 => -1
  */
 
-function binarySearch (array, target) {
-}
+function binarySearch(array, target) {}
 
 module.exports = {
   linearSearch,
-  binarySearch
-}
+  binarySearch,
+};
