@@ -20,7 +20,25 @@
  *
  */
 
-class Person {}
+class Person {
+  sayHi() {
+    console.log("Hi!!");
+  }
+  static describe() {
+    console.log("This is a Person class");
+  }
+  constructor(name = "", age = 0, bio = "") {
+    this.name = name;
+    this.age = age;
+    this.bio = bio;
+  }
+  get isUnderage() {
+    return this.age <= 19;
+  }
+  toString() {
+    return `name: ${this.name}, age: ${this.age}, bio: ${this.bio}`;
+  }
+}
 
 function main() {
   const person = new Person("ichiro", 54, "I like to play baseball");
