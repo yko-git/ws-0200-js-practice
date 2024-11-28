@@ -27,6 +27,7 @@ class List {
    */
   get size() {
     // TODO:
+    return this.data.length;
   }
 
   /** 引数で渡された添字のデータを取得する
@@ -36,6 +37,7 @@ class List {
    */
   index(index) {
     // TODO:
+    return this.data[index];
   }
 
   /** リストの 要素を追加する
@@ -45,6 +47,7 @@ class List {
    */
   push(item) {
     // TODO:
+    return this.data.push(item);
   }
 
   /** 与えられた引数により、リストの 要素を削除する
@@ -54,6 +57,10 @@ class List {
    */
   remove(targetIndex) {
     // TODO:
+    const newArray = this.data.splice(targetIndex, 1);
+    for (const value of newArray) {
+      return value;
+    }
   }
 
   /** リストの 末尾の要素を取得する
@@ -63,6 +70,7 @@ class List {
    */
   pop() {
     // TODO:
+    return this.data.pop();
   }
 
   /** リストの 先頭の要素を取得する
@@ -71,6 +79,7 @@ class List {
    */
   shift() {
     // TODO:
+    return this.data.shift();
   }
 
   /** リストの の中から引数に合致する値を取得する
@@ -82,6 +91,11 @@ class List {
    */
   find(target) {
     // TODO:
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i] === target) {
+        return this.data[i];
+      }
+    }
   }
 
   /** リストの の中から引数に合致する値のindexを取得する。見つからない場合は-1を返す
@@ -93,6 +107,12 @@ class List {
    */
   findIndex(target) {
     // TODO:
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i] === target) {
+        return i;
+      }
+    }
+    return -1;
   }
 
   /** リストの の中から要素に合致する数を取り除く
@@ -106,6 +126,13 @@ class List {
    */
   filter(target) {
     // TODO:
+    let newArray = new List(this.data);
+    for (let i = 0; i < newArray.size; i++) {
+      if (newArray.index(i) === target) {
+        newArray.remove(i);
+      }
+    }
+    return newArray;
   }
 }
 
