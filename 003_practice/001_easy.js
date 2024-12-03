@@ -49,7 +49,19 @@ function reverse(str) {
  *
  */
 
-function findIndex(str, char) {}
+function findIndex(str, char) {
+  const findArray = [];
+  Array.from(str).map((value, index) => {
+    if (value === char) {
+      return findArray.push(index);
+    }
+  });
+  if (findArray.length >= 1) {
+    return Math.min(...findArray);
+  } else {
+    return -1;
+  }
+}
 
 /**
  *  指定された文字列を指定された文字で分割
