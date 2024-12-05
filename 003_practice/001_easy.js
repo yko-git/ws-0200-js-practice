@@ -75,7 +75,9 @@ function findIndex(str, char) {
  *
  */
 
-function split(a, b) {}
+function split(a, b) {
+  return a.split(b);
+}
 
 /**
  *  配列の合計
@@ -89,7 +91,12 @@ function split(a, b) {}
  *
  */
 
-function sum(array) {}
+function sum(array) {
+  const newArray = array.reduce((pre, current) => {
+    return pre + current;
+  }, 0);
+  return newArray;
+}
 
 /**
  *  配列の平均
