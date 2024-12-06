@@ -167,7 +167,16 @@ function size(array) {
  *
  */
 
-function minMax(array) {}
+function minMax(array) {
+  if (array.length === 0) {
+    return "";
+  }
+  return console.log(
+    `max: ${Math.floor(Math.max(...array))}, min: ${Math.floor(
+      Math.min(...array)
+    )}`
+  );
+}
 
 /**
  *  連番
