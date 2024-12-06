@@ -112,7 +112,15 @@ function sum(array) {
  *
  */
 
-function average(array) {}
+function average(array) {
+  if (array.length <= 0) {
+    return 0;
+  }
+  const sum = array.reduce((pre, current) => {
+    return pre + current;
+  }, 0);
+  return Math.floor(sum / array.length);
+}
 
 /**
  *  配列の結合
@@ -126,7 +134,9 @@ function average(array) {}
  *
  */
 
-function concat(a, b) {}
+function concat(a, b) {
+  return [...a, ...b];
+}
 
 /**
  *  2.1.2 配列の個数
@@ -140,7 +150,9 @@ function concat(a, b) {}
  *
  */
 
-function size(array) {}
+function size(array) {
+  return array.length;
+}
 
 /**
  *  2.1.3 配列の最大値と最小値
