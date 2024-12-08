@@ -189,7 +189,13 @@ function minMax(array) {
  *
  */
 
-function seq(num) {}
+function seq(num) {
+  const array = [];
+  for (let i = 0; i < num; i++) {
+    array.push(i);
+  }
+  return array;
+}
 
 /**
  *  奇数の連番
