@@ -209,7 +209,14 @@ function seq(num) {
  *
  */
 
-function omitSeq(num) {}
+function omitSeq(num) {
+  const range = (start, stop, step) =>
+    Array.from(
+      { length: (stop - start) / step + 1 },
+      (_, i) => start + i * step
+    );
+  return range(1, num, 2);
+}
 
 /**
  *  指定された数値以下の配列
