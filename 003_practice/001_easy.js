@@ -229,8 +229,9 @@ function omitSeq(num) {
  *    [], 7 => []
  *
  */
-
-function filter(array, num) {}
+function filter(array, num) {
+  return array.filter((value) => value <= num);
+}
 
 /**
  *  Fizz Buzz
