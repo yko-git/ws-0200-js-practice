@@ -94,7 +94,14 @@ function isPalindrome(str) {
  *    11 => True
  *
  */
-function isPrime(num) {}
+function isPrime(num) {
+  if (num <= 1) {
+    return false;
+  } else if (num === 2 || num === 3) {
+    return true;
+  }
+  return num % 2 !== 0 && num % 3 !== 0;
+}
 
 /**
  *  配列の4と次の数字を抜いた合計
