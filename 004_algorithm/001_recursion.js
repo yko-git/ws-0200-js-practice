@@ -86,7 +86,16 @@ function fibonacci(num, array = [1, 1]) {
  *    => 38
  */
 
-function fileSize(node, sum = 0) {}
+function fileSize(node, sum = 0) {
+  if (!node.children) {
+    return node.size;
+  } else {
+    for (const child of node.children) {
+      sum += fileSize(child);
+    }
+  }
+  return sum;
+}
 
 module.exports = {
   sumSequence,
