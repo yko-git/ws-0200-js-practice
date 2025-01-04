@@ -32,6 +32,17 @@ function bubbleSort(array) {
  */
 
 function insertSort(array) {
+  for (let j = 1; j < array.length; j++) {
+    let temp = array[j];
+    let i = j - 1;
+
+    while (i >= 0 && array[i] > temp) {
+      array[i + 1] = array[i];
+      i--;
+    }
+
+    array[i + 1] = temp;
+  }
   return array;
 }
 
@@ -46,10 +57,38 @@ function insertSort(array) {
  */
 
 function mergeSort(arr) {
-  return arr;
+  if (arr.length <= 1) {
+    return arr;
+  }
+  const mid = Math.floor(arr.length / 2);
+  const left = mergeSort(arr.slice(0, mid));
+  const right = mergeSort(arr.slice(mid));
+
+  return merge(left, right);
 }
 
-function merge(left, right) {}
+function merge(left, right) {
+  const result = [];
+
+  let i = 0,
+    j = 0;
+
+  // 両方の配列に要素が残っている間は比較を続ける条件
+  while (i < left.length && j < right.length) {
+    // 比較しながら小さい方を追加していく処理
+    if (left[i] < right[j]) {
+      result.push(left[i]);
+      i++;
+    } else {
+      result.push(right[j]);
+      j++;
+    }
+  }
+  // 残り要素の追加処理
+  result.push(...left.slice(i));
+  result.push(...right.slice(j));
+  return result;
+}
 
 /**
  *  2.2.4 クイックソート
