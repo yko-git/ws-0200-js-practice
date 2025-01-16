@@ -78,7 +78,17 @@ function assignNumber(persons) {
  *
  */
 
-function isDuplicate(array) {}
+function isDuplicate(array) {
+  let obj = {};
+  for (let i = 0; i < array.length; i++) {
+    if (!obj[array[i]]) {
+      obj[array[i]] = true;
+    } else {
+      return true;
+    }
+  }
+  return false;
+}
 
 module.exports = {
   getPersonObject,
