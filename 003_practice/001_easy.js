@@ -10,7 +10,13 @@
  *
  */
 
-function length(str) {}
+function length(str) {
+  let count = 0;
+  for (let value of str) {
+    count++;
+  }
+  return count;
+}
 
 /**
  *  文字列の反転
