@@ -45,7 +45,14 @@ function reverse(str) {
  *
  */
 
-function findIndex(str, char) {}
+function findIndex(str, char) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      return i;
+    }
+  }
+  return -1;
+}
 
 /**
  *  指定された文字列を指定された文字で分割
