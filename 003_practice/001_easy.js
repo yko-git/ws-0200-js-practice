@@ -66,7 +66,21 @@ function findIndex(str, char) {
  *
  */
 
-function split(a, b) {}
+function split(a, b) {
+  let temp = "";
+  let result = [];
+
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] === b) {
+      result.push(temp);
+      temp = "";
+    } else {
+      temp += a[i];
+    }
+  }
+  result.push(temp);
+  return result;
+}
 
 /**
  *  配列の合計
