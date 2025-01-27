@@ -116,7 +116,15 @@ function sum(array) {
  *
  */
 
-function average(array) {}
+function average(array) {
+  if (array.length >= 1) {
+    let sum = array.reduce((pre, current) => {
+      return pre + current;
+    }, 0);
+    return Math.floor(sum / array.length);
+  }
+  return 0;
+}
 
 /**
  *  配列の結合
