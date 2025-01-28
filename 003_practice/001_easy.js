@@ -138,7 +138,9 @@ function average(array) {
  *
  */
 
-function concat(a, b) {}
+function concat(a, b) {
+  return a.concat(b);
+}
 
 /**
  *  2.1.2 配列の個数
