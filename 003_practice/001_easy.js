@@ -175,7 +175,12 @@ function size(array) {
  *
  */
 
-function minMax(array) {}
+function minMax(array) {
+  if (array.length === 0) {
+    return;
+  }
+  console.log(`max: ${Math.max(...array)}, min: ${Math.min(...array)}`);
+}
 
 /**
  *  連番
