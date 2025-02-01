@@ -236,7 +236,13 @@ function omitSeq(num) {
  */
 
 function filter(array, num) {
-  return array.filter((value) => value <= num);
+  const newArray = [];
+  for (let count of array) {
+    if (count <= num) {
+      newArray.push(count);
+    }
+  }
+  return newArray;
 }
 
 /**
