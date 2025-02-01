@@ -215,7 +215,13 @@ function seq(num) {
  *
  */
 
-function omitSeq(num) {}
+function omitSeq(num) {
+  const array = [];
+  for (let i = 1; i <= num; i += 2) {
+    array.push(i);
+  }
+  return array;
+}
 
 /**
  *  指定された数値以下の配列
