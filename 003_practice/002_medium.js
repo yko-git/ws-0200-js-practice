@@ -42,7 +42,17 @@ function rotate(str, num) {
  *    'banana' => 'bnn'
  *
  */
-function removeVowels(str) {}
+function removeVowels(str) {
+  const array = [...str].filter(
+    (value) =>
+      value !== "a" &&
+      value !== "e" &&
+      value !== "i" &&
+      value !== "o" &&
+      value !== "u"
+  );
+  return array.join("");
+}
 
 /**
  *  文字列のカウント
