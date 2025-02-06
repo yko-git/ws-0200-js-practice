@@ -65,7 +65,16 @@ function removeVowels(str) {
  *    'hogehoage',  'hoge' => 1
  *
  */
-function countStr(s1, s2) {}
+function countStr(s1, s2) {
+  let count = 0;
+  let index = 0;
+
+  while (s1.indexOf(s2, index) !== -1) {
+    index = s1.indexOf(s2, index) + s2.length;
+    count++;
+  }
+  return count;
+}
 
 /**
  *  引数に与えられたアルファベットの文字列が回文であること
