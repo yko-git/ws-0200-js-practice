@@ -88,7 +88,14 @@ function countStr(s1, s2) {
  *
  */
 
-function isPalindrome(str) {}
+function isPalindrome(str) {
+  for (let i = 0; i < Math.floor(str.length / 2); i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+}
 
 /**
  *  素数
