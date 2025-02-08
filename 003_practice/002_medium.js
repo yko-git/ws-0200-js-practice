@@ -111,7 +111,20 @@ function isPalindrome(str) {
  *    11 => True
  *
  */
-function isPrime(num) {}
+function isPrime(num) {
+  if (num === 0 || num === 1) {
+    return false;
+  }
+  if (
+    num === 2 ||
+    num === 3 ||
+    num === 5 ||
+    (num % 2 !== 0 && num % 3 !== 0 && num % 5 !== 0)
+  ) {
+    return true;
+  }
+  return false;
+}
 
 /**
  *  配列の4と次の数字を抜いた合計
