@@ -26,7 +26,17 @@ function sumSequence(n, sum = 0) {
  *    input: 10 => [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
  */
 
-function fibonacci(num) {}
+function fibonacci(num, result = [1, 1]) {
+  if (num === 1) {
+    return [1];
+  } else if (num >= 2) {
+    if (result.length < num) {
+      result.push(result[result.length - 1] + result[result.length - 2]);
+      return fibonacci(num, result);
+    }
+  }
+  return result;
+}
 
 /**
  *  2.4.2 ディレクトリに含まれるファイルサイズの合計
