@@ -162,6 +162,7 @@ class Stack {
    */
   push(item) {
     // TODO:
+    return this.data.push(item);
   }
 
   /** スタックから要素を取得する
@@ -171,6 +172,7 @@ class Stack {
    */
   pop() {
     // TODO:
+    return this.data.pop();
   }
 
   /** スタックの末尾の要素を参照する
@@ -180,6 +182,7 @@ class Stack {
    */
   peek() {
     // TODO:
+    return this.data[this.size - 1];
   }
 }
 
