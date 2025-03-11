@@ -214,6 +214,7 @@ class Queue {
    */
   enqueue(item) {
     // TODO:
+    return this.data.push(item);
   }
 
   /** キューから要素を取得する
@@ -222,6 +223,7 @@ class Queue {
    */
   dequeue() {
     // TODO:
+    return this.data.shift();
   }
 
   /** キューの要素を参照する
@@ -230,6 +232,9 @@ class Queue {
    */
   peek() {
     // TODO:
+    for (let value of this.data) {
+      return value;
+    }
   }
 }
 
