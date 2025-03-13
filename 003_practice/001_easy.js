@@ -29,7 +29,10 @@ function length(str) {
  *    'fizzbuzz' => 'zzubzzif'
  *
  */
-function reverse(str) {}
+function reverse(str) {
+  const reverseStr = [...str].reverse().join("");
+  return reverseStr;
+}
 
 /**
  *  指定された文字列の位置を返却
