@@ -62,7 +62,9 @@ function findIndex(str, char) {
  *
  */
 
-function split(a, b) {}
+function split(a, b) {
+  return a.split(b);
+}
 
 /**
  *  配列の合計
