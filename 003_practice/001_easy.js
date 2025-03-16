@@ -78,7 +78,13 @@ function split(a, b) {
  *
  */
 
-function sum(array) {}
+function sum(array) {
+  let result = 0;
+  for (let i = 0; i < array.length; i++) {
+    result += array[i];
+  }
+  return result;
+}
 
 /**
  *  配列の平均
