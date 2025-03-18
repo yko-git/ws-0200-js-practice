@@ -123,7 +123,7 @@ function average(array) {
  */
 
 function concat(a, b) {
-  return [...a, ...b];
+  return a.concat(b);
 }
 
 /**
