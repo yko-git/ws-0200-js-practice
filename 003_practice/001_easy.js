@@ -155,7 +155,13 @@ function size(array) {
  *
  */
 
-function minMax(array) {}
+function minMax(array) {
+  if (array.length === 0) {
+    return "[]";
+  }
+  array.sort((a, b) => a - b);
+  return console.log(`max: ${array[array.length - 1]}, min: ${array[0]}`);
+}
 
 /**
  *  連番
