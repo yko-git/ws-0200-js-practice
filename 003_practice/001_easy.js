@@ -174,7 +174,15 @@ function minMax(array) {
  *
  */
 
-function seq(num) {}
+function seq(num) {
+  const array = [];
+  let count = 0;
+  while (array.length < num) {
+    array.push(count);
+    count += 1;
+  }
+  return array;
+}
 
 /**
  *  奇数の連番
