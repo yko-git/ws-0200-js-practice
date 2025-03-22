@@ -196,7 +196,15 @@ function seq(num) {
  *
  */
 
-function omitSeq(num) {}
+function omitSeq(num) {
+  const array = [];
+  let count = 0;
+  while (array.length <= num) {
+    array.push(count);
+    count += 1;
+  }
+  return array.filter((value) => value % 2 !== 0);
+}
 
 /**
  *  指定された数値以下の配列
