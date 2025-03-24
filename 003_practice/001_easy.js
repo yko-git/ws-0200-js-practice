@@ -245,7 +245,21 @@ function filter(array, num) {
  *    ...
  */
 
-function fizzBuzz() {}
+function fizzBuzz() {
+  let count = 0;
+  while (count < 100) {
+    ++count;
+    if (count % 15 === 0) {
+      console.log(`${count} FizzBuzz`);
+    } else if (count % 3 === 0) {
+      console.log(`${count} Fizz`);
+    } else if (count % 5 === 0) {
+      console.log(`${count} Buzz`);
+    } else {
+      console.log(count);
+    }
+  }
+}
 
 module.exports = {
   length,
