@@ -9,7 +9,26 @@
  *    'library', -1 => 'ibraryl'
  *
  */
-function rotate(str, num) {}
+function rotate(str, num) {
+  const left = [];
+  const right = [];
+
+  if (num <= -1) {
+    left.push(str.slice(0, Math.abs(num)));
+    right.push(str.slice(Math.abs(num), str.length - Math.abs(num) + 1));
+    return [...right, ...left].join("");
+  }
+
+  [...str].forEach((value, index) => {
+    if (index >= str.length - Math.abs(num)) {
+      left.push(str[index]);
+    } else {
+      right.push(str[index]);
+    }
+  });
+
+  return [...left, ...right].join("");
+}
 
 /**
  *  母音を除いた文字列
