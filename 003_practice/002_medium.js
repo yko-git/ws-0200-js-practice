@@ -127,7 +127,19 @@ function isPrime(num) {
  *    [4] => 0
  *
  */
-function sumWithout4andNext(array) {}
+function sumWithout4andNext(array) {
+  const targetArray = [];
+  array.forEach((value, index) => {
+    if (value === 4) {
+      targetArray.push(index, index + 1);
+    }
+  });
+  targetArray.forEach((value) => {
+    array.splice(value, 1, 0);
+  });
+
+  return array.reduce((pre, current) => pre + current);
+}
 
 module.exports = {
   rotate,
