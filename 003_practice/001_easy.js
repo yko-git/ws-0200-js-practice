@@ -49,7 +49,9 @@ function reverse(str) {
  *
  */
 
-function findIndex(str, char) {}
+function findIndex(str, char) {
+  return str.indexOf(char);
+}
 
 /**
  *  指定された文字列を指定された文字で分割
