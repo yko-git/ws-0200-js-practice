@@ -103,7 +103,13 @@ function sum(array) {
  *
  */
 
-function average(array) {}
+function average(array) {
+  if (array.length === 0) {
+    return 0;
+  }
+  const result = array.reduce((pre, current) => pre + current);
+  return Math.floor(result / array.length);
+}
 
 /**
  *  配列の結合
