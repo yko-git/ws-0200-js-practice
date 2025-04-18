@@ -139,7 +139,13 @@ function concat(a, b) {
  *
  */
 
-function size(array) {}
+function size(array) {
+  let count = 0;
+  for (let value of array) {
+    count++;
+  }
+  return count;
+}
 
 /**
  *  2.1.3 配列の最大値と最小値
