@@ -178,7 +178,15 @@ function minMax(array) {
  *
  */
 
-function seq(num) {}
+function seq(num) {
+  let count = 0;
+  const result = [];
+  while (result.length < num) {
+    result.push(count);
+    count += 1;
+  }
+  return result;
+}
 
 /**
  *  奇数の連番
