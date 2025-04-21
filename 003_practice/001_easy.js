@@ -200,7 +200,15 @@ function seq(num) {
  *
  */
 
-function omitSeq(num) {}
+function omitSeq(num) {
+  const newArray = [];
+  for (let i = 1; i <= num; i++) {
+    if (i % 2 !== 0) {
+      newArray.push(i);
+    }
+  }
+  return newArray;
+}
 
 /**
  *  指定された数値以下の配列
