@@ -10,24 +10,14 @@
  *
  */
 function rotate(str, num) {
-  const left = [];
-  const right = [];
-
-  if (num <= -1) {
-    left.push(str.slice(0, Math.abs(num)));
-    right.push(str.slice(Math.abs(num), str.length - Math.abs(num) + 1));
-    return [...right, ...left].join("");
+  if (num <= 0) {
+    let first = str.slice(Math.abs(num));
+    let after = str.slice(0, Math.abs(num));
+    return first + after;
   }
-
-  [...str].forEach((value, index) => {
-    if (index >= str.length - Math.abs(num)) {
-      left.push(str[index]);
-    } else {
-      right.push(str[index]);
-    }
-  });
-
-  return [...left, ...right].join("");
+  let first = str.slice(str.length - num);
+  let after = str.slice(0, str.length - num);
+  return first + after;
 }
 
 /**
@@ -41,9 +31,7 @@ function rotate(str, num) {
  *    'banana' => 'bnn'
  *
  */
-function removeVowels(str) {
-  return str.replace(/[a,e,i,o,u]/g, "");
-}
+function removeVowels(str) {}
 
 /**
  *  文字列のカウント
@@ -56,14 +44,7 @@ function removeVowels(str) {
  *    'hogehoage',  'hoge' => 1
  *
  */
-function countStr(s1, s2) {
-  const re = new RegExp(s2, "g");
-  let count = 0;
-  while (re.test(s1)) {
-    count += 1;
-  }
-  return count;
-}
+function countStr(s1, s2) {}
 
 /**
  *  引数に与えられたアルファベットの文字列が回文であること
@@ -77,14 +58,7 @@ function countStr(s1, s2) {
  *
  */
 
-function isPalindrome(str) {
-  for (let i = 0; i < str.length / 2; i++) {
-    while (str[i] !== str[str.length - i - 1]) {
-      return false;
-    }
-  }
-  return true;
-}
+function isPalindrome(str) {}
 
 /**
  *  素数
@@ -100,17 +74,7 @@ function isPalindrome(str) {
  *    11 => True
  *
  */
-function isPrime(num) {
-  if (num <= 1) {
-    return false;
-  }
-  for (let i = 2; i < num; i++) {
-    if (num % i === 0) {
-      return false;
-    }
-  }
-  return true;
-}
+function isPrime(num) {}
 
 /**
  *  配列の4と次の数字を抜いた合計
@@ -127,19 +91,7 @@ function isPrime(num) {
  *    [4] => 0
  *
  */
-function sumWithout4andNext(array) {
-  const targetArray = [];
-  array.forEach((value, index) => {
-    if (value === 4) {
-      targetArray.push(index, index + 1);
-    }
-  });
-  targetArray.forEach((value) => {
-    array.splice(value, 1, 0);
-  });
-
-  return array.reduce((pre, current) => pre + current);
-}
+function sumWithout4andNext(array) {}
 
 module.exports = {
   rotate,
