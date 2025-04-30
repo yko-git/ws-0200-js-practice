@@ -56,12 +56,13 @@ function removeVowels(str) {
  *
  */
 function countStr(s1, s2, count = 0, num = 0) {
-  if (s1.indexOf(s2, num) === -1) {
+  const index = s1.indexOf(s2, num);
+  if (index === -1) {
     return count;
   }
 
   count++;
-  return countStr(s1, s2, count, num + s2.length + 1);
+  return countStr(s1, s2, count, index + s2.length);
 }
 
 /**
