@@ -33,6 +33,18 @@ function bubbleSort(array) {
  */
 
 function insertSort(array) {
+  let temp, j; // 挿入する値と比較に使うインデックス用の変数
+  for (let i = 1; i < array.length; i++) {
+    // 配列の2番目の要素（index 1）からループ
+    temp = array[i]; // 挿入対象の値を一時的に保存
+    j = i - 1; // i の1つ前の要素を j に設定
+    while (j >= 0 && array[j] > temp) {
+      // j が 0 以上で、array[j] が temp より大きい間
+      array[j + 1] = array[j]; // 右に1つ移動
+      j--; // j をデクリメント（左に移動）
+    }
+    array[j + 1] = temp; // 空いた位置に temp を挿入
+  }
   return array;
 }
 
