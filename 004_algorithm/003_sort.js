@@ -59,10 +59,24 @@ function insertSort(array) {
  */
 
 function mergeSort(arr) {
-  return arr;
+  if (arr.length <= 1) {
+    return arr;
+  }
+  let left = mergeSort(arr.slice(0, Math.floor(arr.length / 2)));
+  let right = mergeSort(arr.slice(Math.floor(arr.length / 2)));
+  return merge(left, right);
 }
 
-function merge(left, right) {}
+function merge(left, right) {
+  const resultArray = [];
+
+  for (let i = 0; i < left.length; i++) {
+    if (left[i] > right[i]) {
+      resultArray.push(right[i]);
+    }
+  }
+  return resultArray;
+}
 
 /**
  *  2.2.4 クイックソート
