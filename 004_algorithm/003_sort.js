@@ -69,13 +69,14 @@ function mergeSort(arr) {
 
 function merge(left, right) {
   const resultArray = [];
-
-  for (let i = 0; i < left.length; i++) {
-    if (left[i] > right[i]) {
-      resultArray.push(right[i]);
+  while (left.length > 0 && right.length > 0) {
+    if (left[0] > right[0]) {
+      resultArray.push(right.shift());
+    } else {
+      resultArray.push(left.shift());
     }
   }
-  return resultArray;
+  return resultArray.concat(left, right);
 }
 
 /**
