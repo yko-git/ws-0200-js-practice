@@ -11,8 +11,8 @@
 function bubbleSort(array) {
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < array.length - 1 - i; j++) {
-      if (array[j] > array[j + 1]) {
-        let temp = array[j];
+      let temp = array[j];
+      while (temp > array[j + 1]) {
         array[j] = array[j + 1];
         array[j + 1] = temp;
       }
@@ -31,18 +31,7 @@ function bubbleSort(array) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function insertSort(array) {
-  for (let i = 0; i < array.length; i++) {
-    let temp = array[i];
-    let j = i - 1;
-    while (j >= 0 && temp < array[j]) {
-      array[j + 1] = array[j];
-      j--;
-    }
-    array[j + 1] = temp;
-  }
-  return array;
-}
+function insertSort(array) {}
 
 /**
  *  2.2.3 マージソート
@@ -54,26 +43,9 @@ function insertSort(array) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function mergeSort(arr) {
-  if (arr.length <= 1) {
-    return arr;
-  }
-  let left = mergeSort(arr.slice(0, Math.floor(arr.length / 2)));
-  let right = mergeSort(arr.slice(Math.floor(arr.length / 2)));
-  return merge(left, right);
-}
+function mergeSort(arr) {}
 
-function merge(left, right) {
-  const newArray = [];
-  while (left.length > 0 && right.length > 0) {
-    if (left[0] < right[0]) {
-      newArray.push(left.shift());
-    } else {
-      newArray.push(right.shift());
-    }
-  }
-  return newArray.concat(left, right);
-}
+function merge(left, right) {}
 
 /**
  *  2.2.4 クイックソート
