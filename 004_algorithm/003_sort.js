@@ -55,9 +55,26 @@ function insertSort(array) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function mergeSort(arr) {}
+function mergeSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+  let left = mergeSort(arr.slice(0, Math.floor(arr.length / 2)));
+  let right = mergeSort(arr.slice(Math.floor(arr.length / 2)));
+  return merge(left, right);
+}
 
-function merge(left, right) {}
+function merge(left, right) {
+  const newArray = [];
+  while (left.length > 0 && right.length > 0) {
+    if (left[0] > right[0]) {
+      newArray.push(right.shift());
+    } else {
+      newArray.push(left.shift());
+    }
+  }
+  return newArray.concat(left, right);
+}
 
 /**
  *  2.2.4 クイックソート
