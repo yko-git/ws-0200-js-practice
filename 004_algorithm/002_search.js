@@ -29,21 +29,7 @@ function linearSearch(array, target) {
  *    [1, 2, 3, 4] 5 => -1
  */
 
-function binarySearch(array, target, low = 0, high = array.length - 1) {
-  let middle = Math.floor((low + high) / 2);
-  if (low > high) {
-    return -1;
-  }
-  if (target === array[middle]) {
-    return middle;
-  }
-  if (target < array[middle]) {
-    return binarySearch(array, target, low, (high = middle - 1));
-  }
-  if (target > array[middle]) {
-    return binarySearch(array, target, (low = middle + 1), high);
-  }
-}
+function binarySearch(array, target, low = 0, high = array.length - 1) {}
 
 module.exports = {
   linearSearch,
