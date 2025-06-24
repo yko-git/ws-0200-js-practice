@@ -38,10 +38,10 @@ function binarySearch(array, target, low = 0, high = array.length - 1) {
     return mid;
   }
   if (array[mid] < target) {
-    return binarySearch(array, target, mid + 1, high);
+    return binarySearch(array, target, low + 1, high);
   }
   if (array[mid] > target) {
-    return binarySearch(array, target, low, mid - 1);
+    return binarySearch(array, target, low, high - 1);
   }
 }
 
