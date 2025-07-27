@@ -10,14 +10,9 @@
  *
  */
 function rotate(str, num) {
-  if (num <= 0) {
-    let first = str.slice(Math.abs(num));
-    let after = str.slice(0, Math.abs(num));
-    return first + after;
-  }
-  let first = str.slice(str.length - num);
-  let after = str.slice(0, str.length - num);
-  return first + after;
+  const left = str.slice(-num);
+  const right = str.slice(0, -num);
+  return left + right;
 }
 
 /**
@@ -31,18 +26,7 @@ function rotate(str, num) {
  *    'banana' => 'bnn'
  *
  */
-function removeVowels(str) {
-  return [...str]
-    .filter(
-      (value) =>
-        value !== "a" &&
-        value !== "e" &&
-        value !== "i" &&
-        value !== "o" &&
-        value !== "u"
-    )
-    .join("");
-}
+function removeVowels(str) {}
 
 /**
  *  文字列のカウント
@@ -55,15 +39,7 @@ function removeVowels(str) {
  *    'hogehoage',  'hoge' => 1
  *
  */
-function countStr(s1, s2, count = 0, num = 0) {
-  const index = s1.indexOf(s2, num);
-  if (index === -1) {
-    return count;
-  }
-
-  count++;
-  return countStr(s1, s2, count, index + s2.length);
-}
+function countStr(s1, s2, count = 0, num = 0) {}
 
 /**
  *  引数に与えられたアルファベットの文字列が回文であること
@@ -77,14 +53,7 @@ function countStr(s1, s2, count = 0, num = 0) {
  *
  */
 
-function isPalindrome(str) {
-  for (let i = 0; i < Math.floor(str.length / 2); i++) {
-    if (str[i] !== str[str.length - i - 1]) {
-      return false;
-    }
-  }
-  return true;
-}
+function isPalindrome(str) {}
 
 /**
  *  素数
@@ -100,15 +69,7 @@ function isPalindrome(str) {
  *    11 => True
  *
  */
-function isPrime(num) {
-  if (num === 2 || num === 3 || num === 5) {
-    return true;
-  }
-  if (num === 1 || num % 2 === 0 || num % 3 === 0 || num % 5 === 0) {
-    return false;
-  }
-  return true;
-}
+function isPrime(num) {}
 
 /**
  *  配列の4と次の数字を抜いた合計
@@ -125,20 +86,7 @@ function isPrime(num) {
  *    [4] => 0
  *
  */
-function sumWithout4andNext(array) {
-  let sum = 0;
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === 4) {
-      i++;
-      if (array[i] === 4) {
-        i++;
-      }
-      continue;
-    }
-    sum += array[i];
-  }
-  return sum;
-}
+function sumWithout4andNext(array) {}
 
 module.exports = {
   rotate,
