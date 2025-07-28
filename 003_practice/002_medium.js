@@ -26,7 +26,12 @@ function rotate(str, num) {
  *    'banana' => 'bnn'
  *
  */
-function removeVowels(str) {}
+function removeVowels(str) {
+  const remove = [...str].filter(
+    (x) => x !== "a" && x !== "e" && x !== "i" && x !== "o" && x !== "u"
+  );
+  return remove.join("");
+}
 
 /**
  *  文字列のカウント
