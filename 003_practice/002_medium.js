@@ -47,7 +47,6 @@ function removeVowels(str) {
 function countStr(s1, s2, count = 0, num = 0) {
   const index = s1.indexOf(s2);
   if (index === -1) return count;
-
   const next = s1.slice(index + s2.length);
   return countStr(next, s2, count + 1);
 }
