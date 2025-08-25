@@ -10,8 +10,8 @@
  *
  */
 function rotate(str, num) {
-  const left = str.slice(-num);
   const right = str.slice(0, -num);
+  const left = str.slice(-num);
   return left + right;
 }
 
@@ -26,12 +26,7 @@ function rotate(str, num) {
  *    'banana' => 'bnn'
  *
  */
-function removeVowels(str) {
-  const remove = [...str].filter(
-    (x) => x !== "a" && x !== "e" && x !== "i" && x !== "o" && x !== "u"
-  );
-  return remove.join("");
-}
+function removeVowels(str) {}
 
 /**
  *  文字列のカウント
@@ -44,12 +39,7 @@ function removeVowels(str) {
  *    'hogehoage',  'hoge' => 1
  *
  */
-function countStr(s1, s2, count = 0, num = 0) {
-  const index = s1.indexOf(s2);
-  if (index === -1) return count;
-  const next = s1.slice(index + s2.length);
-  return countStr(next, s2, count + 1);
-}
+function countStr(s1, s2, count = 0, num = 0) {}
 
 /**
  *  引数に与えられたアルファベットの文字列が回文であること
@@ -63,14 +53,7 @@ function countStr(s1, s2, count = 0, num = 0) {
  *
  */
 
-function isPalindrome(str) {
-  for (let i = 0; i < Math.floor(str.length / 2); i++) {
-    if (str[i] !== str[str.length - i - 1]) {
-      return false;
-    }
-  }
-  return true;
-}
+function isPalindrome(str) {}
 
 /**
  *  素数
@@ -86,18 +69,7 @@ function isPalindrome(str) {
  *    11 => True
  *
  */
-function isPrime(num) {
-  if (num === 1) {
-    return false;
-  }
-  if (num === 2 || num === 3) {
-    return true;
-  }
-  if (num % 2 === 0 || num % 3 === 0) {
-    return false;
-  }
-  return true;
-}
+function isPrime(num) {}
 
 /**
  *  配列の4と次の数字を抜いた合計
@@ -114,22 +86,7 @@ function isPrime(num) {
  *    [4] => 0
  *
  */
-function sumWithout4andNext(array) {
-  const newArray = [];
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] === 4) {
-      if (array[i + 1] === 4) {
-        i += 2;
-        continue;
-      }
-      i += 1;
-      continue;
-    }
-    newArray.push(array[i]);
-  }
-
-  return newArray.reduce((pre, current) => pre + current, 0);
-}
+function sumWithout4andNext(array) {}
 
 module.exports = {
   rotate,
