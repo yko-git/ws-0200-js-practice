@@ -31,19 +31,7 @@ function bubbleSort(array) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function insertSort(array) {
-  let j, temp;
-  for (let i = 1; i < array.length; i++) {
-    temp = array[i];
-    j = i - 1;
-    while (j >= 0 && temp < array[j]) {
-      array[j + 1] = array[j];
-      j--;
-    }
-    array[j + 1] = temp;
-  }
-  return array;
-}
+function insertSort(array) {}
 
 /**
  *  2.2.3 マージソート
@@ -55,26 +43,9 @@ function insertSort(array) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function mergeSort(arr) {
-  if (arr.length <= 1) {
-    return arr;
-  }
-  const left = mergeSort(arr.slice(0, Math.floor(arr.length / 2)));
-  const right = mergeSort(arr.slice(Math.floor(arr.length / 2)));
-  return merge(left, right);
-}
+function mergeSort(arr) {}
 
-function merge(left, right) {
-  const newArray = [];
-  while (left.length > 0 && right.length > 0) {
-    if (left[0] > right[0]) {
-      newArray.push(right.shift());
-    } else {
-      newArray.push(left.shift());
-    }
-  }
-  return newArray.concat(left, right);
-}
+function merge(left, right) {}
 
 /**
  *  2.2.4 クイックソート
@@ -86,14 +57,7 @@ function merge(left, right) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function quickSort(a) {
-  if (a.length <= 1) return a;
-
-  const pivot = a[0];
-  const left = quickSort(a.slice(1).filter((x) => x <= pivot));
-  const right = quickSort(a.slice(1).filter((x) => x > pivot));
-  return [...left, pivot, ...right];
-}
+function quickSort(a) {}
 
 module.exports = {
   bubbleSort,
