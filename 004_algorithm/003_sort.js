@@ -84,7 +84,13 @@ function merge(left, right) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function quickSort(a) {}
+function quickSort(a) {
+  if (a.length < 1) return a;
+  const pivot = a[0];
+  const left = quickSort(a.slice(1).filter((x) => x < pivot));
+  const right = quickSort(a.slice(1).filter((x) => x >= pivot));
+  return [...left, pivot, ...right];
+}
 
 module.exports = {
   bubbleSort,
