@@ -31,7 +31,19 @@ function bubbleSort(array) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function insertSort(array) {}
+function insertSort(array) {
+  let j, temp;
+  for (let i = 1; i < array.length; i++) {
+    temp = array[i];
+    j = i - 1;
+    while (j >= 0 && temp < array[j]) {
+      array[j + 1] = array[j];
+      j--;
+    }
+    array[j + 1] = temp;
+  }
+  return array;
+}
 
 /**
  *  2.2.3 マージソート
