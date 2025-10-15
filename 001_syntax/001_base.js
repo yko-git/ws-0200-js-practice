@@ -69,19 +69,25 @@ function productTwoArgs(a, b) {
  *  1.9 渡された引数の2で割ったあまりを返却するメソッドを実装してください
  *
  */
-function remainderTwoArgs(a) {}
+function remainderTwoArgs(a) {
+  return a % 2;
+}
 
 /**
  *  1.10 渡された引数が2の倍数であることを確認するメソッドを実装してください
  *
  */
-function isEven(a) {}
+function isEven(a) {
+  return a % 2 === 0;
+}
 
 /**
  *  1.11 渡された二つの文字列を連結するメソッドを実装してください
  *
  */
-function concatString(a, b) {}
+function concatString(a, b) {
+  return a + b;
+}
 
 module.exports = {
   helloWorld,
