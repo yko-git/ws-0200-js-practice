@@ -5,7 +5,9 @@
  *    と出力するメソッドを実装してください
  *
  */
-function printMessageByAge(age) {}
+function printMessageByAge(age) {
+  return console.log(age >= 20 ? "成年です。" : "未成年です。");
+}
 
 /**
  *  2.2 引数から与えられた時間が
