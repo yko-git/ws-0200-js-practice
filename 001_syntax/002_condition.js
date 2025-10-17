@@ -17,7 +17,15 @@ function printMessageByAge(age) {
  *    と出力するメソッドを実装してください
  *
  */
-function greeding(hour) {}
+function greeding(hour) {
+  if (hour >= 4 && hour < 12) {
+    console.log("Good Morning");
+  } else if (hour >= 12 && hour < 17) {
+    console.log("Hello");
+  } else {
+    console.log("Good Night");
+  }
+}
 
 /**
  *  2.3 引数から与えられた数字に対応する曜日を出力するメソッドを実装します。
