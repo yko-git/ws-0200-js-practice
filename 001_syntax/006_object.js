@@ -25,7 +25,9 @@ function getPersonObject() {
  *
  */
 
-function mutateObject(person) {}
+function mutateObject(person) {
+  return { name: "Mary", age: 37, gender: "female" };
+}
 
 /**
  *  6.3 下記引数で渡される配列にランダムな1 ~10の数字を割り振り、オブジェクトとして返す
