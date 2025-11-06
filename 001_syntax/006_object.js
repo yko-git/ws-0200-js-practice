@@ -50,7 +50,11 @@ function mutateObject(person) {
  *
  */
 
-function assignNumber(persons) {}
+function assignNumber(persons) {
+  return persons.reduce((acc, name, index) => {
+    return { ...acc, [name]: 1 + Math.floor(Math.random() * 10) };
+  }, {});
+}
 
 /**
  *  6.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください
