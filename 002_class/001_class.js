@@ -20,7 +20,15 @@
  *
  */
 
-class Person {}
+class Person {
+  constructor(name, age, bio) {}
+  sayHi() {
+    console.log("Hi!!");
+  }
+  static describe() {
+    console.log("This is a Person class");
+  }
+}
 
 function main() {
   const person = new Person("ichiro", 54, "I like to play baseball");
