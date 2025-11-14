@@ -26,7 +26,7 @@ class List {
    * @return {Number}
    */
   get size() {
-    // TODO:
+    return this.data.length;
   }
 
   /** 引数で渡された添字のデータを取得する
@@ -35,7 +35,7 @@ class List {
    * @return {Number}
    */
   index(index) {
-    // TODO:
+    return this.data[index];
   }
 
   /** リストの 要素を追加する
@@ -45,6 +45,7 @@ class List {
    */
   push(item) {
     // TODO:
+    return this.data.push(item);
   }
 
   /** 与えられた引数により、リストの 要素を削除する
@@ -54,6 +55,7 @@ class List {
    */
   remove(targetIndex) {
     // TODO:
+    return this.data[targetIndex];
   }
 
   /** リストの 末尾の要素を取得する
@@ -63,6 +65,7 @@ class List {
    */
   pop() {
     // TODO:
+    return this.data.pop();
   }
 
   /** リストの 先頭の要素を取得する
@@ -71,6 +74,7 @@ class List {
    */
   shift() {
     // TODO:
+    return this.data.shift();
   }
 
   /** リストの の中から引数に合致する値を取得する
