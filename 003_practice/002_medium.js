@@ -9,7 +9,17 @@
  *    'library', -1 => 'ibraryl'
  *
  */
-function rotate(str, num) {}
+function rotate(str, num) {
+  let base, target;
+  if (num <= 0) {
+    left = str.slice(Math.abs(num), str.length);
+    right = str.slice(0, Math.abs(num));
+  } else {
+    right = str.slice(0, str.length - num);
+    left = str.slice(-num);
+  }
+  return left + right;
+}
 
 /**
  *  母音を除いた文字列
