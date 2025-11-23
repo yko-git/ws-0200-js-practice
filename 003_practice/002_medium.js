@@ -72,7 +72,17 @@ function countStr(s1, s2) {
  *
  */
 
-function isPalindrome(str) {}
+function isPalindrome(str) {
+  for (let i = 0; i < Math.floor(str.length / 2); i++) {
+    for (let j = str.length - 1; j > Math.floor(str.length / 2); j--) {
+      if (str[i] !== str[j]) {
+        return false;
+      }
+      return true;
+    }
+  }
+  return true;
+}
 
 /**
  *  素数
