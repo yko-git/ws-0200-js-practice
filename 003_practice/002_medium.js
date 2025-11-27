@@ -126,7 +126,20 @@ function isPrime(num) {
  *    [4] => 0
  *
  */
-function sumWithout4andNext(array) {}
+function sumWithout4andNext(array) {
+  let count = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === 4) {
+      let sum = array[i];
+      if (array[i + 1]) {
+        sum += array[i + 1];
+      }
+      count -= sum;
+    }
+    count += array[i];
+  }
+  return count >= 0 ? count : 0;
+}
 
 module.exports = {
   rotate,
