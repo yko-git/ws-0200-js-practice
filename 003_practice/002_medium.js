@@ -127,18 +127,18 @@ function isPrime(num) {
  *
  */
 function sumWithout4andNext(array) {
-  let count = 0;
+  const sum = 0;
+  let withoutIndex = [];
   for (let i = 0; i < array.length; i++) {
     if (array[i] === 4) {
-      let sum = array[i];
-      if (array[i + 1]) {
-        sum += array[i + 1];
-      }
-      count -= sum;
+      withoutIndex.push(i, i + 1);
     }
-    count += array[i];
   }
-  return count >= 0 ? count : 0;
+
+  const newArray = array.filter(
+    (value, index) => withoutIndex.includes(index) === false
+  );
+  return newArray.reduce((pre, current) => pre + current, 0);
 }
 
 module.exports = {
