@@ -27,7 +27,16 @@ function linearSearch(array, target) {
  *    [1, 2, 3, 4] 5 => -1
  */
 
-function binarySearch(array, target) {}
+function binarySearch(array, target, left = 0, right = array.length) {
+  let middle = Math.floor((left + right) / 2);
+  if (target === array[middle]) return middle;
+  if (target <= array[middle]) {
+    return binarySearch(array, target, left, middle - 1);
+  } else if (target > array[middle]) {
+    return binarySearch(array, target, middle + 1, right);
+  }
+  return -1;
+}
 
 module.exports = {
   linearSearch,
