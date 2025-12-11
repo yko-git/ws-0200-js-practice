@@ -24,7 +24,13 @@ function printOneToTenDesc() {
  *
  */
 
-function printOneToTenWhile() {}
+function printOneToTenWhile() {
+  let count = 0;
+  while (count <= 10) {
+    console.log(count);
+    count++;
+  }
+}
 
 /**
  *  3.4 while文を使って0~10までの数字を大きい順番に表示するメソッドを実装してください
