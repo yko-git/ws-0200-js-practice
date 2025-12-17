@@ -30,7 +30,9 @@ function firstChar(str) {
  *
  */
 
-function lastChar(str) {}
+function lastChar(str) {
+  return str.substr(str.length - 1, 1);
+}
 
 /**
  *  4.5 文字列と二つの数字a, bを渡すとa文字目から, b文字目まで
