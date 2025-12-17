@@ -40,7 +40,9 @@ function lastChar(str) {
  *
  */
 
-function substring(str, a, b) {}
+function substring(str, a, b) {
+  return str.slice(a - 1, b);
+}
 
 /**
  *  4.6 引数に与えられた二つの引数のうち、一つ目の引数の文字列に二つ目の引数の文字列が
