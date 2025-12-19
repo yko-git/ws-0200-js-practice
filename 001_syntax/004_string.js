@@ -74,7 +74,9 @@ function isInclude(a, b) {
  *
  */
 
-function printByChar(str) {}
+function printByChar(str) {
+  return [...str].forEach((value) => console.log(value));
+}
 
 module.exports = {
   length,
