@@ -3,7 +3,9 @@
  *
  */
 
-function printArray(array) {}
+function printArray(array) {
+  return array.forEach((num) => console.log(num));
+}
 
 /**
  *  5.2 関数内で全ての曜日を配列として宣言して返却するメソッドを実装してください
