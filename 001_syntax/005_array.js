@@ -60,16 +60,15 @@ function findNum(array, num) {
  */
 
 function isDuplicate(array) {
-  let count = 0;
   for (let i = 0; i < array.length; i++) {
-    for (let j = i; j < array.length; j++) {
+    for (let j = i + 1; j < array.length; j++) {
       const temp = array[i];
       if (temp === array[j]) {
-        count++;
+        return true;
       }
     }
   }
-  return count >= 5;
+  return false;
 }
 
 module.exports = {
