@@ -58,7 +58,13 @@ function mutateObject(person) {
  *
  */
 
-function assignNumber(persons) {}
+function assignNumber(persons) {
+  const personsObj = {};
+  for (let obj of persons) {
+    personsObj[obj] = Math.floor(Math.random() * 10);
+  }
+  return personsObj;
+}
 
 /**
  *  6.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください
