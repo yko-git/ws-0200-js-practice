@@ -77,7 +77,13 @@ function assignNumber(persons) {
  *
  */
 
-function isDuplicate(array) {}
+function isDuplicate(array) {
+  const newObj = {};
+  for (let obj of array) {
+    newObj[obj] = "true";
+  }
+  return Object.keys(newObj).length < array.length;
+}
 
 module.exports = {
   getPersonObject,
