@@ -47,6 +47,7 @@ class List {
    */
   push(item) {
     // TODO:
+    return this.data.push(item);
   }
 
   /** 与えられた引数により、リストの 要素を削除する
