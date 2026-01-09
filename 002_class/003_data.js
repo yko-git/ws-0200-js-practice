@@ -87,6 +87,9 @@ class List {
    */
   find(target) {
     // TODO:
+    for (let i = 0; i < this.size; i++) {
+      if (this.data[i] === target) return this.data[i];
+    }
   }
 
   /** リストの の中から引数に合致する値のindexを取得する。見つからない場合は-1を返す
