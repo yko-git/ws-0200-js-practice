@@ -118,6 +118,13 @@ class List {
    */
   filter(target) {
     // TODO:
+    const newData = new List([]);
+    for (let i = 0; i < this.size; i++) {
+      if (this.data[i] !== target) {
+        newData.push(this.data[i]);
+      }
+    }
+    return newData;
   }
 }
 
