@@ -207,6 +207,7 @@ class Queue {
    */
   enqueue(item) {
     // TODO:
+    return this.data.push(item);
   }
 
   /** キューから要素を取得する
