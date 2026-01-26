@@ -83,13 +83,11 @@ function fibonacci(num, array = [1, 1]) {
  */
 
 function fileSize(node, sum = 0) {
-  if (!node.children) return sum;
+  if (node.type === "file") return node.size;
   for (let obj of node.children) {
-    if (obj.type === "file") {
-      sum += obj.size;
-    }
-    return (sum += fileSize(obj, sum));
+    sum += fileSize(obj);
   }
+  return sum;
 }
 
 module.exports = {
