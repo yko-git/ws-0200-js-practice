@@ -31,14 +31,17 @@ function binarySearch(array, target, left = 0, right = array.length) {
   if (array[middle] === target) {
     return middle;
   }
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] < target) {
-      return binarySearch(array, target, left, middle);
-    }
-    if (array[i] > target) {
-      return binarySearch(array, target, middle, right);
+  while (left > right) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] < target) {
+        return binarySearch(array, target, left, middle);
+      }
+      if (array[i] > target) {
+        return binarySearch(array, target, middle, right);
+      }
     }
   }
+  return -1;
 }
 
 module.exports = {
