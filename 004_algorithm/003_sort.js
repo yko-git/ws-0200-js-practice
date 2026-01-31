@@ -8,8 +8,18 @@
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function bubbleSort (array) {
-  return array
+function bubbleSort(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length - i; j++) {
+      let temp = array[i];
+      if (temp > array[j]) {
+        array[i] = array[j];
+        array[j] = temp;
+      }
+      temp = array[i + 1];
+    }
+  }
+  return array;
 }
 
 /**
@@ -22,8 +32,8 @@ function bubbleSort (array) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function insertSort (array) {
-  return array
+function insertSort(array) {
+  return array;
 }
 
 /**
@@ -36,12 +46,11 @@ function insertSort (array) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function mergeSort (arr) {
-  return arr
+function mergeSort(arr) {
+  return arr;
 }
 
-function merge(left, right) {
-}
+function merge(left, right) {}
 
 /**
  *  2.2.4 クイックソート
@@ -53,13 +62,13 @@ function merge(left, right) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function quickSort (a, start = 0, end = (a.length -1)) {
-  return a
-};
+function quickSort(a, start = 0, end = a.length - 1) {
+  return a;
+}
 
 module.exports = {
   bubbleSort,
   insertSort,
   mergeSort,
-  quickSort
-}
+  quickSort,
+};
