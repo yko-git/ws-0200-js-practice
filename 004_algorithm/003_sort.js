@@ -7,16 +7,14 @@
  *    [1, 3, 2, 4, 5] => [1, 2, 3, 4, 5]
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
-
 function bubbleSort(array) {
   for (let i = 0; i < array.length; i++) {
-    for (let j = i + 1; j < array.length - i; j++) {
-      let temp = array[i];
-      if (temp > array[j]) {
-        array[i] = array[j];
-        array[j] = temp;
+    for (let j = 0; j < array.length - i - 1; j++) {
+      let temp = array[j];
+      if (temp > array[j + 1]) {
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
       }
-      temp = array[i + 1];
     }
   }
   return array;
