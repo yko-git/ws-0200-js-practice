@@ -91,13 +91,11 @@ function quickSort(a, start = 0, end = a.length - 1) {
   for (let i = 1; i < a.length; i++) {
     if (a[i] < pivot) {
       left.push(a[i]);
-      quickSort(left, start, pivot - 1);
     } else {
       right.push(a[i]);
-      quickSort(right, pivot + 1, end);
     }
   }
-  return [...left, pivot, ...right];
+  return [...quickSort(left), pivot, ...quickSort(right)];
 }
 
 module.exports = {
