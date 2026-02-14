@@ -84,7 +84,7 @@ function merge(left, right) {
 
 function quickSort(a, start = 0, end = a.length - 1) {
   if (a.length <= 1) return a;
-  const pivot = a[Math.floor((start + end) / 2)];
+  const pivot = a[0];
   const left = [];
   const right = [];
   for (let i = 0; i < a.length; i++) {
