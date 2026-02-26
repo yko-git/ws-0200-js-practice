@@ -8,15 +8,14 @@
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 function bubbleSort(array) {
-  let j, temp;
-  for (let i = 1; i < array.length; i++) {
-    j = i - 1;
-    temp = array[i];
-    while (j >= 0 && temp < array[j]) {
-      array[j + 1] = array[j];
-      j--;
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length - i - 1; j++) {
+      let temp = array[j];
+      if (temp > array[j + 1]) {
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
+      }
     }
-    array[j + 1] = temp;
   }
   return array;
 }
@@ -31,7 +30,19 @@ function bubbleSort(array) {
  *    [5, 3, 2, 1] => [1, 2, 3, 5]
  */
 
-function insertSort(array) {}
+function insertSort(array) {
+  let j, temp;
+  for (let i = 1; i < array.length; i++) {
+    j = i - 1;
+    temp = array[i];
+    while (j >= 0 && temp < array[j]) {
+      array[j + 1] = array[j];
+      j--;
+    }
+    array[j + 1] = temp;
+  }
+  return array;
+}
 
 /**
  *  2.2.3 マージソート
