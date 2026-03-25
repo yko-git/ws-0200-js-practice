@@ -36,7 +36,12 @@ function printOneToTenWhile() {
  *
  */
 
-function printOneToTenWhileDesc() {}
+function printOneToTenWhileDesc() {
+  let count = 10;
+  while (count >= 0) {
+    console.log(count--);
+  }
+}
 
 module.exports = {
   printOneToTen,
