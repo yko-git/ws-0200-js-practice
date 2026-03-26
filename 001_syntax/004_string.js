@@ -3,7 +3,9 @@
  *
  */
 
-function length(str) {}
+function length(str) {
+  return [...str].length;
+}
 
 /**
  *  4.2 文字列のながさが偶数の場合にtrueを返却するメソッドを実装してください
