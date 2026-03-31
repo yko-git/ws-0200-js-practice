@@ -59,7 +59,9 @@ function substring(str, a, b) {
  *      "hogegeho", "fugafuga" => false
  * */
 
-function isInclude(a, b) {}
+function isInclude(a, b) {
+  return a.includes(b);
+}
 
 /**
  *  4.7 引数で渡された文字列を一文字ずつ表示するメソッドを実装してください
