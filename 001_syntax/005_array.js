@@ -24,7 +24,17 @@ function printArray(array) {
  *      ]
  *
  */
-function getDays() {}
+function getDays() {
+  return [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ];
+}
 
 /**
  *  5.3 配列に特定の数があった場合にtrue、そうでない場合にfalseを返す関数を実装してください
