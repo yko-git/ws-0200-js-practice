@@ -60,7 +60,16 @@ function findNum(array, num) {
  *
  */
 
-function isDuplicate(array) {}
+function isDuplicate(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length - i + 1; j++) {
+      if (array[i] === array[j]) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
 
 module.exports = {
   printArray,
