@@ -46,7 +46,9 @@ function getDays() {
  *
  */
 
-function findNum(array, num) {}
+function findNum(array, num) {
+  return array.includes(num);
+}
 
 /**
  *  5.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください
