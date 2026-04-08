@@ -58,7 +58,16 @@ function mutateObject(person) {
  *
  */
 
-function assignNumber(persons) {}
+function assignNumber(persons) {
+  const newObj = persons.reduce(
+    (acc, key) => ({
+      ...acc,
+      [key]: Math.floor(Math.random() * 10),
+    }),
+    {},
+  );
+  return newObj;
+}
 
 /**
  *  6.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください
