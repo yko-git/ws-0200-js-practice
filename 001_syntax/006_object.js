@@ -80,7 +80,14 @@ function assignNumber(persons) {
  *
  */
 
-function isDuplicate(array) {}
+function isDuplicate(array) {
+  if (array.length <= 0) return false;
+  const newObj = {};
+  for (let obj of array) {
+    newObj[obj] = true;
+  }
+  return Object.keys(newObj).length !== array.length;
+}
 
 module.exports = {
   getPersonObject,
