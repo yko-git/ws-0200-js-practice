@@ -27,6 +27,7 @@ class List {
    */
   get size() {
     // TODO:
+    return this.data.length;
   }
 
   /** 引数で渡された添字のデータを取得する
