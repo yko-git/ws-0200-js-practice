@@ -66,6 +66,7 @@ class List {
    */
   pop() {
     // TODO:
+    return this.data.pop(this.data.length);
   }
 
   /** リストの 先頭の要素を取得する
