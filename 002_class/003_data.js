@@ -87,6 +87,11 @@ class List {
    */
   find(target) {
     // TODO:
+    for (let value of this.data) {
+      if (value === target) {
+        return value;
+      }
+    }
   }
 
   /** リストの の中から引数に合致する値のindexを取得する。見つからない場合は-1を返す
