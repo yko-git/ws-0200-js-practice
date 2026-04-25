@@ -122,6 +122,13 @@ class List {
    */
   filter(target) {
     // TODO:
+    const newList = new List([]);
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i] !== target) {
+        newList.push(this.data[i]);
+      }
+    }
+    return newList;
   }
 }
 
