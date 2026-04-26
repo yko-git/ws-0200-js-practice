@@ -159,6 +159,7 @@ class Stack {
    */
   push(item) {
     // TODO:
+    return this.data.push(item);
   }
 
   /** スタックから要素を取得する
