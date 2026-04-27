@@ -179,6 +179,7 @@ class Stack {
    */
   peek() {
     // TODO:
+    return this.data[this.data.length - 1];
   }
 }
 
