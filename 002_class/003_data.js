@@ -169,6 +169,7 @@ class Stack {
    */
   pop() {
     // TODO:
+    return this.data.pop(this.data.length);
   }
 
   /** スタックの末尾の要素を参照する
