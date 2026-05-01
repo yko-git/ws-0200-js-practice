@@ -223,6 +223,7 @@ class Queue {
    */
   dequeue() {
     // TODO:
+    return this.data.shift();
   }
 
   /** キューの要素を参照する
