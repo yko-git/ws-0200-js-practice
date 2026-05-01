@@ -232,6 +232,7 @@ class Queue {
    */
   peek() {
     // TODO:
+    return this.data[0];
   }
 }
 
