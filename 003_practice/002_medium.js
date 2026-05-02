@@ -9,7 +9,10 @@
  *    'library', -1 => 'ibraryl'
  *
  */
-function rotate(str, num) {}
+function rotate(str, num) {
+  let target = str.slice(-num);
+  return target + str.slice(0, -num);
+}
 
 /**
  *  母音を除いた文字列
