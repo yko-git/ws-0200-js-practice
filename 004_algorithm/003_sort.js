@@ -32,6 +32,16 @@ function bubbleSort(array) {
  */
 
 function insertSort(array) {
+  let j, sorted;
+  for (let i = 1; i < array.length; i++) {
+    j = i - 1;
+    temp = array[i];
+    while (j >= 0 && temp < array[j]) {
+      array[j + 1] = array[j];
+      j--;
+    }
+    array[j + 1] = temp;
+  }
   return array;
 }
 
