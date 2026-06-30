@@ -20,7 +20,14 @@
  *
  */
 
-class Person {}
+class Person {
+  sayHi() {
+    return console.log("Hi!!");
+  }
+  static describe() {
+    return console.log("This is a Person class");
+  }
+}
 
 function main() {
   const person = new Person("ichiro", 54, "I like to play baseball");
