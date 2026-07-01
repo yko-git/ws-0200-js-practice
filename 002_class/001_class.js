@@ -21,6 +21,11 @@
  */
 
 class Person {
+  constructor(name = "", age = 0, bio = "") {
+    this.name = name;
+    this.age = age;
+    this.bio = bio;
+  }
   sayHi() {
     return console.log("Hi!!");
   }
