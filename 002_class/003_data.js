@@ -66,6 +66,7 @@ class List {
    */
   pop() {
     // TODO:
+    return this.data.pop();
   }
 
   /** リストの 先頭の要素を取得する
@@ -74,6 +75,7 @@ class List {
    */
   shift() {
     // TODO:
+    return this.data.shift();
   }
 
   /** リストの の中から引数に合致する値を取得する
