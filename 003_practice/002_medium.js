@@ -33,7 +33,13 @@ function rotate(str, num) {
  *    'banana' => 'bnn'
  *
  */
-function removeVowels(str) {}
+function removeVowels(str) {
+  return [...str]
+    .filter(
+      (x) => x !== "a" && x !== "e" && x !== "i" && x !== "o" && x !== "u",
+    )
+    .join("");
+}
 
 /**
  *  文字列のカウント
