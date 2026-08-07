@@ -56,10 +56,23 @@ function insertSort(array) {
  */
 
 function mergeSort(arr) {
-  return arr;
+  if (arr.length <= 1) return arr;
+  const left = mergeSort(arr.slice(0, Math.floor(arr.length / 2)));
+  const right = mergeSort(arr.slice(Math.floor(arr.length / 2)));
+  return merge(left, right);
 }
 
-function merge(left, right) {}
+function merge(left, right) {
+  const newArray = [];
+  while (left.length >= 1 && right.length >= 1) {
+    if (left[0] > right[0]) {
+      newArray.push(right.shift());
+    } else {
+      newArray.push(left.shift());
+    }
+  }
+  return newArray.concat(left, right);
+}
 
 /**
  *  2.2.4 クイックソート
