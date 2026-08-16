@@ -6,7 +6,7 @@
  *
  */
 function printMessageByAge(age) {
-  return age >= 20 ? "成年です。" : "未成年です。";
+  return age >= 20 ? console.log("成年です。") : console.log("未成年です。");
 }
 
 /**
@@ -17,7 +17,15 @@ function printMessageByAge(age) {
  *    と出力するメソッドを実装してください
  *
  */
-function greeding(hour) {}
+function greeding(hour) {
+  if (hour >= 4 && hour < 12) {
+    return console.log("Good Morning");
+  } else if (hour >= 12 && hour < 17) {
+    return console.log("Hello");
+  } else {
+    return console.log("Good Night");
+  }
+}
 
 /**
  *  2.3 引数から与えられた数字に対応する曜日を出力するメソッドを実装します。
