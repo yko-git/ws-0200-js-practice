@@ -52,7 +52,7 @@ function getDay(day) {
   ];
   for (let i = 0; i < days.length; i++) {
     if (day === i) {
-      return days[i];
+      return console.log(days[i]);
     }
   }
 }
