@@ -40,7 +40,22 @@ function greeding(hour) {
  *
  */
 
-function getDay(day) {}
+function getDay(day) {
+  const days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  for (let i = 0; i < days.length; i++) {
+    if (day === i) {
+      return days[i];
+    }
+  }
+}
 
 module.exports = {
   printMessageByAge,
