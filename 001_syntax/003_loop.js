@@ -3,7 +3,11 @@
  *
  */
 
-function printOneToTen() {}
+function printOneToTen() {
+  for (let i = 0; i <= 10; i++) {
+    console.log(i);
+  }
+}
 
 /**
  *  3.2 0~10までの数字を数字の大きい順に表示するメソッドを実装してください
