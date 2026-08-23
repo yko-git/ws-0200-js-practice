@@ -12,7 +12,9 @@ function length(str) {
  *
  */
 
-function lengthIsEven(str) {}
+function lengthIsEven(str) {
+  return str.length % 2 === 0;
+}
 
 /**
  *  4.3 文字列の先頭一文字目を返却するメソッドを実装してください
