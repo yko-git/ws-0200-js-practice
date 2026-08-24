@@ -21,7 +21,9 @@ function lengthIsEven(str) {
  *
  */
 
-function firstChar(str) {}
+function firstChar(str) {
+  return str.length >= 1 ? [...str].shift() : "";
+}
 
 /**
  *  4.4 文字列の末尾一文字目を返却するメソッドを実装してください
