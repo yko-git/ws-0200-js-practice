@@ -41,7 +41,7 @@ function lastChar(str) {
  */
 
 function substring(str, a, b) {
-  return str.substring(a, b);
+  return str.substring(-a, b);
 }
 
 /**
@@ -74,7 +74,9 @@ function isInclude(a, b) {
  *
  */
 
-function printByChar(str) {}
+function printByChar(str) {
+  [...str].forEach((x) => console.log(x));
+}
 
 module.exports = {
   length,
