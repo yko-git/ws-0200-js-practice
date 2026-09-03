@@ -7,7 +7,13 @@
  *
  */
 
-function getPersonObject() {}
+function getPersonObject() {
+  return {
+    name: "Bob",
+    age: 32,
+    gender: "male",
+  };
+}
 
 /**
  *  6.2 下記データAが引数で与えられた場合にデータBに書き換える関数を実装してください。
