@@ -24,6 +24,9 @@ class Person {
   sayHi() {
     console.log("Hi!!");
   }
+  describe() {
+    console.log("This is a Person class");
+  }
 }
 
 function main() {
