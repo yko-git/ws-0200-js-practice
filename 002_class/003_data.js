@@ -103,6 +103,12 @@ class List {
    */
   findIndex(target) {
     // TODO:
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i] === target) {
+        return i;
+      }
+    }
+    return -1;
   }
 
   /** リストの の中から要素に合致する数を取り除く
